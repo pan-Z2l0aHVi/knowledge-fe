@@ -6,29 +6,28 @@ import { useUnmount } from './useUnmount'
 
 type noop = (...args: any[]) => any
 export interface DebounceOptions {
-	leading?: boolean
-	trailing?: boolean
-	maxWait?: number
+  leading?: boolean
+  trailing?: boolean
+  maxWait?: number
 }
 export function useDebounce<T extends noop>(fn: T, wait = 1000, options?: DebounceOptions) {
-	const fnRef = useLatestRef(fn)
+  const fnRef = useLatestRef(fn)
 
-	const debounced = useMemo(
-		() =>
-			debounce(
-				(...args: Parameters<T>): ReturnType<T> => {
-					return fnRef.current(...args)
-				},
-				wait,
-				options
-			),
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[]
-	)
+  const debounced = useMemo(
+    () =>
+      debounce(
+        (...args: Parameters<T>): ReturnType<T> => {
+          return fnRef.current(...args)
+        },
+        wait,
+        options
+      ),
+    []
+  )
 
-	useUnmount(() => {
-		debounced.cancel()
-	})
+  useUnmount(() => {
+    debounced.cancel()
+  })
 
-	return debounced
+  return debounced
 }

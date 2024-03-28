@@ -5,9 +5,9 @@ import presetAutoprefixer from 'unocss-preset-autoprefixer'
 import { theme } from '../../build/unocss'
 
 export default defineConfig({
-	presets: [presetUno(), presetAutoprefixer(), presetRemToPx()],
-	rules: [],
-	theme: {
-		...theme
-	}
+  presets: [presetUno(), presetAutoprefixer(), presetRemToPx()],
+  rules: [],
+  theme: {
+    ...theme
+  }
 })

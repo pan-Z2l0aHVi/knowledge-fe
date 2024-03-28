@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import OverlayMDX from './overlay.mdx'
 
 export default function OverlayDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.overlay')} component={OverlayMDX} />
+  return <Demo heading={t('page.title.overlay')} component={OverlayMDX} />
 }

@@ -2,8 +2,8 @@
 
 ## 代码演示
 
-import { useState } from 'react'
 import { Button, Divider, Space, Trigger } from '@youknown/react-ui/src'
+import { useState } from 'react'
 
 ---
 
@@ -42,7 +42,7 @@ export function TriggerMethods() {
 ---
 
 ```tsx
-import { Space, Trigger, Button } from '@youknown/react-ui'
+import { Button, Space, Trigger } from '@youknown/react-ui'
 import { useState } from 'react'
 
 export default () => {
@@ -106,7 +106,7 @@ export function TriggerMotion() {
 ---
 
 ```tsx
-import { Trigger, Space, Button } from '@youknown/react-ui'
+import { Button, Space, Trigger } from '@youknown/react-ui'
 
 export default () => {
   const createContent = text => (
@@ -138,20 +138,20 @@ export default () => {
 
 ### Trigger Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| defaultOpen    | 默认是否打开           | `boolean`         | `false`  |
-| open    | 是否打开           | `boolean`         | -  |
-| popup    | 弹出内容           | `React.ReactNode`         | -  |
-| trigger    | 触发方式           | `'hover' \| 'click' \| 'manual'`         | `'hover'`  |
-| placement    | 排布           | `Placement`         | `'bottom-start'`  |
-| mouseEnterDelay    | 移入事件延迟           | `number`         | `100`  |
-| mouseLeaveDelay    | 移除事件延迟           | `number`         | `100`  |
-| spacing    | 间距偏移           | `number`         | `8`  |
-| crossOffset    | 交叉偏移           | `number`         | `0`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| unmountOnExit    | 关闭时卸载组件           | `boolean`         | `false`  |
-| motion    | 动画           | `'none' \| 'grow' \| 'stretch' \| 'fade' \| 'zoom'`         | `'none'`  |
-| appendTo    | 插入到节点           | `HTMLElement \| null`         | `document.body`  |
-| onClickOutside    | 点击外部事件           | `(event: globalThis.MouseEvent) => void`         | -  |
-| onOpenChange    | 打开变化回调函数           | `(open: boolean) => void`         | -  |
+| 属性            | 说明             | 类型                                                | 默认值           |
+| --------------- | ---------------- | --------------------------------------------------- | ---------------- |
+| defaultOpen     | 默认是否打开     | `boolean`                                           | `false`          |
+| open            | 是否打开         | `boolean`                                           | -                |
+| popup           | 弹出内容         | `React.ReactNode`                                   | -                |
+| trigger         | 触发方式         | `'hover' \| 'click' \| 'manual'`                    | `'hover'`        |
+| placement       | 排布             | `Placement`                                         | `'bottom-start'` |
+| mouseEnterDelay | 移入事件延迟     | `number`                                            | `100`            |
+| mouseLeaveDelay | 移除事件延迟     | `number`                                            | `100`            |
+| spacing         | 间距偏移         | `number`                                            | `8`              |
+| crossOffset     | 交叉偏移         | `number`                                            | `0`              |
+| disabled        | 是否禁用         | `boolean`                                           | `false`          |
+| unmountOnExit   | 关闭时卸载组件   | `boolean`                                           | `false`          |
+| motion          | 动画             | `'none' \| 'grow' \| 'stretch' \| 'fade' \| 'zoom'` | `'none'`         |
+| appendTo        | 插入到节点       | `HTMLElement \| null`                               | `document.body`  |
+| onClickOutside  | 点击外部事件     | `(event: globalThis.MouseEvent) => void`            | -                |
+| onOpenChange    | 打开变化回调函数 | `(open: boolean) => void`                           | -                |

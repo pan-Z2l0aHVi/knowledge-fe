@@ -2,8 +2,8 @@
 
 ## 代码演示
 
+import { Button, Space, Switch } from '@youknown/react-ui/src'
 import { useState } from 'react'
-import { Space, Switch, Button } from '@youknown/react-ui/src'
 
 ---
 
@@ -42,8 +42,8 @@ export function SwitchSize() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Space, Switch } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   return (
@@ -52,7 +52,7 @@ export default () => {
       <Switch size="medium" defaultValue />
       <Switch size="large" defaultValue />
     </Space>
-  ) 
+  )
 }
 ```
 
@@ -73,8 +73,8 @@ export function Controllable() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Switch } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [checked, setChecked] = useState(false)
@@ -109,10 +109,10 @@ export default () => {
 
 ### Switch Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| size    | 大小           | `'small' \| 'medium' \| 'large'`         | `'medium'`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| defaultValue    | 默认值           | `boolean`         | `false`  |
-| value    | 值           | `boolean`         | -  |
-| onChange    | 值改变回调函数           | `(value: boolean) => void`         | -  |
+| 属性         | 说明           | 类型                             | 默认值     |
+| ------------ | -------------- | -------------------------------- | ---------- |
+| size         | 大小           | `'small' \| 'medium' \| 'large'` | `'medium'` |
+| disabled     | 是否禁用       | `boolean`                        | `false`    |
+| defaultValue | 默认值         | `boolean`                        | `false`    |
+| value        | 值             | `boolean`                        | -          |
+| onChange     | 值改变回调函数 | `(value: boolean) => void`       | -          |

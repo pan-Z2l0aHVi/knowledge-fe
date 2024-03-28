@@ -22,56 +22,56 @@ import TableDeleteBtn from './components/table-delete-btn'
 
 interface TableOperatorProps extends ButtonProps, ComponentProps<typeof Popover> {}
 export default function TableOperator(props: TableOperatorProps) {
-	const { editor, tooltip = true, trigger = 'click', ...rest } = omit(props, 'defaultOpen', 'open', 'onOpenChange')
+  const { editor, tooltip = true, trigger = 'click', ...rest } = omit(props, 'defaultOpen', 'open', 'onOpenChange')
 
-	const { t } = useTranslation()
-	const [open, onOpenChange] = useControllable(props, {
-		defaultValue: false,
-		defaultValuePropName: 'defaultOpen',
-		valuePropName: 'open',
-		trigger: 'onOpenChange'
-	})
+  const { t } = useTranslation()
+  const [open, onOpenChange] = useControllable(props, {
+    defaultValue: false,
+    defaultValuePropName: 'defaultOpen',
+    valuePropName: 'open',
+    trigger: 'onOpenChange'
+  })
 
-	const prefixCls = `${UI_EDITOR_PREFIX}-table-operator`
-	const verticalDivider = <Divider className={`${prefixCls}-divider`} size="small" direction="vertical" />
-	const tableOperatorsPopup = (
-		<Space size="small" align="center">
-			<CellMergeBtn editor={editor} />
-			<CellSplitBtn editor={editor} />
-			<ColBeforeAddBtn editor={editor} />
-			<ColAfterAddBtn editor={editor} />
-			<RowBeforeAddBtn editor={editor} />
-			<RowAfterAddBtn editor={editor} />
-			<RowDeleteBtn editor={editor} />
-			<ColDeleteBtn editor={editor} />
-			{verticalDivider}
-			<TableDeleteBtn editor={editor} />
-		</Space>
-	)
+  const prefixCls = `${UI_EDITOR_PREFIX}-table-operator`
+  const verticalDivider = <Divider className={`${prefixCls}-divider`} size="small" direction="vertical" />
+  const tableOperatorsPopup = (
+    <Space size="small" align="center">
+      <CellMergeBtn editor={editor} />
+      <CellSplitBtn editor={editor} />
+      <ColBeforeAddBtn editor={editor} />
+      <ColAfterAddBtn editor={editor} />
+      <RowBeforeAddBtn editor={editor} />
+      <RowAfterAddBtn editor={editor} />
+      <RowDeleteBtn editor={editor} />
+      <ColDeleteBtn editor={editor} />
+      {verticalDivider}
+      <TableDeleteBtn editor={editor} />
+    </Space>
+  )
 
-	return (
-		<Popover
-			placement="bottom"
-			content={tableOperatorsPopup}
-			trigger={trigger}
-			open={open}
-			onOpenChange={onOpenChange}
-			{...rest}
-		>
-			<CommandBtn
-				className={cls(prefixCls)}
-				arrow
-				tooltip={t('react_rte.table.operation')}
-				tooltipDisabled={!tooltip}
-				active={open}
-				onCommand={() => {
-					if (trigger === 'manual') {
-						onOpenChange?.(!open)
-					}
-				}}
-			>
-				<TbTableOptions />
-			</CommandBtn>
-		</Popover>
-	)
+  return (
+    <Popover
+      placement="bottom"
+      content={tableOperatorsPopup}
+      trigger={trigger}
+      open={open}
+      onOpenChange={onOpenChange}
+      {...rest}
+    >
+      <CommandBtn
+        className={cls(prefixCls)}
+        arrow
+        tooltip={t('react_rte.table.operation')}
+        tooltipDisabled={!tooltip}
+        active={open}
+        onCommand={() => {
+          if (trigger === 'manual') {
+            onOpenChange?.(!open)
+          }
+        }}
+      >
+        <TbTableOptions />
+      </CommandBtn>
+    </Popover>
+  )
 }

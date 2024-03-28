@@ -2,8 +2,8 @@
 
 ## 代码演示
 
-import { useState } from 'react'
 import { Divider, Tabs } from '@youknown/react-ui/src'
+import { useState } from 'react'
 
 ---
 
@@ -22,7 +22,8 @@ export function BasicUsage() {
     },
     {
       key: 'c',
-      name: 'Tab C'
+      name: 'Tab C',
+      closable: true
     },
     {
       key: 'd',
@@ -37,13 +38,14 @@ export function BasicUsage() {
         tabList={[
           { key: 'line', name: 'Line Tab' },
           { key: 'round', name: 'Round Tab' },
-          { key: 'segment', name: 'Segment Tab' }
+          { key: 'segment', name: 'Segment Tab' },
+          { key: 'card', name: 'Card Tab' }
         ]}
         value={tabsType}
         onChange={setTabsType}
       />
       <Divider />
-      <Tabs type={tabsType} tabList={tabList} defaultValue='a' />
+      <Tabs type={tabsType} tabList={tabList} defaultValue="a" />
     </>
   )
 }
@@ -69,7 +71,8 @@ export default () => {
     },
     {
       key: 'c',
-      name: 'Tab C'
+      name: 'Tab C',
+      closable: true
     },
     {
       key: 'd',
@@ -84,13 +87,14 @@ export default () => {
         tabList={[
           { key: 'line', name: 'Line Tab' },
           { key: 'round', name: 'Round Tab' },
-          { key: 'segment', name: 'Segment Tab' }
+          { key: 'segment', name: 'Segment Tab' },
+          { key: 'card', name: 'Card Tab' }
         ]}
         value={tabsType}
         onChange={setTabsType}
       />
       <Divider />
-      <Tabs type={tabsType} tabList={tabList} defaultValue='line' />
+      <Tabs type={tabsType} tabList={tabList} defaultValue="line" />
     </>
   )
 }
@@ -127,8 +131,8 @@ export function Controllable() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Tabs } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const tabList = [
@@ -180,13 +184,7 @@ export function Closable() {
       closable: true
     }
   ])
-  return (
-    <Tabs
-      defaultValue="a"
-      tabList={closableList}
-      onTabListChange={setClosableTabList}
-    />
-  )
+  return <Tabs defaultValue="a" tabList={closableList} onTabListChange={setClosableTabList} />
 }
 
 <Closable />
@@ -194,8 +192,8 @@ export function Closable() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Tabs } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [closableList, setClosableTabList] = useState([
@@ -220,13 +218,7 @@ export default () => {
       closable: true
     }
   ])
-  return (
-    <Tabs
-      defaultValue="a"
-      tabList={closableList}
-      onTabListChange={setClosableTabList}
-    />
-  )
+  return <Tabs defaultValue="a" tabList={closableList} onTabListChange={setClosableTabList} />
 }
 ```
 
@@ -234,20 +226,20 @@ export default () => {
 
 ### Tabs Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| type    | 类型           | `'line' \| 'round' \| 'segment'`         | `'line'`  |
-| tabList    | 标签列表           | `TabOption[]`         | `[]`  |
-| onTabListChange    | 标签列表变化回调函数           | `(tabList: TabOption[]) => void`         | -  |
-| defaultValue    | 默认值           | `string \| number`         | -  |
-| value    | 值           | `string \| number`         | -  |
-| onChange    | 值变化回调函数           | (value: `string \| number`) => void         | -  |
+| 属性            | 说明                 | 类型                                | 默认值   |
+| --------------- | -------------------- | ----------------------------------- | -------- |
+| type            | 类型                 | `'line' \| 'round' \| 'segment'`    | `'line'` |
+| tabList         | 标签列表             | `TabOption[]`                       | `[]`     |
+| onTabListChange | 标签列表变化回调函数 | `(tabList: TabOption[]) => void`    | -        |
+| defaultValue    | 默认值               | `string \| number`                  | -        |
+| value           | 值                   | `string \| number`                  | -        |
+| onChange        | 值变化回调函数       | (value: `string \| number`) => void | -        |
 
 ### TabOption
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| key    | 标签key           | `string \| number`         | -  |
-| name    | 标签标题           | `React.ReactNode`         | -  |
-| disabled    | 是否禁用           | `boolean`         | -  |
-| closable    | 是否展示关闭按钮           | `boolean`         | -  |
+| 参数     | 说明             | 类型               | 默认值 |
+| -------- | ---------------- | ------------------ | ------ |
+| key      | 标签key          | `string \| number` | -      |
+| name     | 标签标题         | `React.ReactNode`  | -      |
+| disabled | 是否禁用         | `boolean`          | -      |
+| closable | 是否展示关闭按钮 | `boolean`          | -      |

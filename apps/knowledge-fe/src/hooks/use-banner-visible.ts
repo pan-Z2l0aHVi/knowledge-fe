@@ -4,41 +4,41 @@ import { useCallback, useEffect, useState } from 'react'
 const CLOSED_KEY = 'banner-closed'
 
 export function useBannerVisible(): [
-	boolean,
-	{
-		show: () => void
-		hide: () => void
-	}
+  boolean,
+  {
+    show: () => void
+    hide: () => void
+  }
 ] {
-	const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false)
 
-	const update_visible_status = () => {
-		const closed = storage.local.get(CLOSED_KEY)
-		setVisible(!closed)
-	}
+  const update_visible_status = () => {
+    const closed = storage.local.get(CLOSED_KEY)
+    setVisible(!closed)
+  }
 
-	useEffect(() => {
-		update_visible_status()
-		const storage_handler = (event: StorageEvent) => {
-			if (event.key === CLOSED_KEY) {
-				update_visible_status()
-			}
-		}
-		window.addEventListener('storage', storage_handler)
-		return () => {
-			window.removeEventListener('storage', storage_handler)
-		}
-	}, [])
+  useEffect(() => {
+    update_visible_status()
+    const storage_handler = (event: StorageEvent) => {
+      if (event.key === CLOSED_KEY) {
+        update_visible_status()
+      }
+    }
+    window.addEventListener('storage', storage_handler)
+    return () => {
+      window.removeEventListener('storage', storage_handler)
+    }
+  }, [])
 
-	const show = useCallback(() => {
-		storage.local.remove(CLOSED_KEY)
-		setVisible(true)
-	}, [])
+  const show = useCallback(() => {
+    storage.local.remove(CLOSED_KEY)
+    setVisible(true)
+  }, [])
 
-	const hide = useCallback(() => {
-		storage.local.set(CLOSED_KEY, 1, 7 * 24 * 60 * 60 * 1000)
-		setVisible(false)
-	}, [])
+  const hide = useCallback(() => {
+    storage.local.set(CLOSED_KEY, 1, 7 * 24 * 60 * 60 * 1000)
+    setVisible(false)
+  }, [])
 
-	return [visible, { show, hide }]
+  return [visible, { show, hide }]
 }

@@ -1,11 +1,5 @@
 {
     "eslint.options": {
       "configFile": "../.eslintrc.json"
-    },
-    "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact"
-    ]
+    }
   }

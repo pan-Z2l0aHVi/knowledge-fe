@@ -2,9 +2,9 @@
 
 ## 代码演示
 
-import { Button, Space, Tooltip, Divider, Tabs, Switch } from '@youknown/react-ui/src'
-import { TbSearch, TbUpload } from 'react-icons/tb'
+import { Button, Divider, Space, Switch, Tabs, Tooltip } from '@youknown/react-ui/src'
 import { useState } from 'react'
+import { TbSearch, TbUpload } from 'react-icons/tb'
 
 ---
 
@@ -162,12 +162,8 @@ export default () => {
 export function ButtonIcon() {
   return (
     <Space>
-      <Button prefixIcon={<TbSearch />}>
-        Prefix
-      </Button>
-      <Button suffixIcon={<TbSearch />}>
-        Suffix
-      </Button>
+      <Button prefixIcon={<TbSearch />}>Prefix</Button>
+      <Button suffixIcon={<TbSearch />}>Suffix</Button>
     </Space>
   )
 }
@@ -182,12 +178,8 @@ import { Button } from '@youknown/react-ui'
 export default () => {
   return (
     <Space>
-      <Button prefixIcon={<TbSearch />}>
-        Prefix
-      </Button>
-      <Button suffixIcon={<TbSearch />}>
-        Suffix
-      </Button>
+      <Button prefixIcon={<TbSearch />}>Prefix</Button>
+      <Button suffixIcon={<TbSearch />}>Suffix</Button>
     </Space>
   )
 }
@@ -305,16 +297,16 @@ export default () => {
 
 ## API
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| primary    | 主要按钮           | `boolean`         | `false`  |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| size       | 大小               |  `'small' \| 'medium' \| 'large'`  | `'medium'` |
-| danger     | 危险按钮           | `boolean`         | `false`  |
-| text       | 文本按钮           | `boolean`         | `false`  |
-| round      | 大圆角形状         | `boolean`         | `false`  |
-| square     | 正方形             | `boolean`         | `false`  |
-| circle     | 圆形               | `boolean`         | `false`  |
-| loading    | 加载中状态         | `boolean`         | `false`  |
-| prefixIcon | 按钮文本前面的图标 | `React.ReactNode` | `null`   |
-| suffixIcon | 按钮文本后面的图标 | `React.ReactNode` | `null`   |
+| 属性       | 说明               | 类型                             | 默认值     |
+| ---------- | ------------------ | -------------------------------- | ---------- |
+| primary    | 主要按钮           | `boolean`                        | `false`    |
+| disabled   | 禁用状态           | `boolean`                        | `false`    |
+| size       | 大小               | `'small' \| 'medium' \| 'large'` | `'medium'` |
+| danger     | 危险按钮           | `boolean`                        | `false`    |
+| text       | 文本按钮           | `boolean`                        | `false`    |
+| round      | 大圆角形状         | `boolean`                        | `false`    |
+| square     | 正方形             | `boolean`                        | `false`    |
+| circle     | 圆形               | `boolean`                        | `false`    |
+| loading    | 加载中状态         | `boolean`                        | `false`    |
+| prefixIcon | 按钮文本前面的图标 | `React.ReactNode`                | `null`     |
+| suffixIcon | 按钮文本后面的图标 | `React.ReactNode`                | `null`     |

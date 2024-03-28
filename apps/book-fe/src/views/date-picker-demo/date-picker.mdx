@@ -3,8 +3,8 @@
 ## 代码演示
 
 import { DatePicker, Divider, Space, Switch } from '@youknown/react-ui/src'
-import { useState } from 'react'
 import dayjs, { Dayjs } from 'dayjs'
+import { useState } from 'react'
 
 ---
 
@@ -45,9 +45,7 @@ export default () => {
 
 export function Controlled() {
   const [date, setDate] = useState()
-  return (
-    <DatePicker value={date} onChange={setDate} />
-  )
+  return <DatePicker value={date} onChange={setDate} />
 }
 
 <Controlled />
@@ -60,9 +58,7 @@ import dayjs, { Dayjs } from 'dayjs'
 
 export default () => {
   const [date, setDate] = useState<Dayjs>()
-  return (
-    <DatePicker value={date} onChange={setDate} />
-  )
+  return <DatePicker value={date} onChange={setDate} />
 }
 ```
 
@@ -84,7 +80,7 @@ export function DatePickerDisabled() {
 ---
 
 ```tsx
-import { DatePicker, Switch, Divider } from '@youknown/react-ui'
+import { DatePicker, Divider, Switch } from '@youknown/react-ui'
 import { useState } from 'react'
 
 export default () => {
@@ -101,13 +97,13 @@ export default () => {
 
 ## API
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| size       | 大小               |  `'small' \| 'medium' \| 'large'`  | `'medium'` |
-| disabled    | 禁用态           | `boolean`         | `false`  |
-| allowClear    | 是否展示清空按钮           | `boolean`         | `false`  |
-| icon    | 图标           | `React.ReactNode`         | `<TbCalendar />`  |
-| placeholder    | 占位符           | `string`         | `t('react_ui.placeholder.date')`  |
-| defaultValue    | 默认值           | `Dayjs`         | `dayjs(null)`  |
-| value    | 封面           | `Dayjs`         | -  |
-| onChange    | 值变化回调函数           | `(value: Dayjs) => void`         | -  |
+| 属性         | 说明             | 类型                             | 默认值                           |
+| ------------ | ---------------- | -------------------------------- | -------------------------------- |
+| size         | 大小             | `'small' \| 'medium' \| 'large'` | `'medium'`                       |
+| disabled     | 禁用态           | `boolean`                        | `false`                          |
+| allowClear   | 是否展示清空按钮 | `boolean`                        | `false`                          |
+| icon         | 图标             | `React.ReactNode`                | `<TbCalendar />`                 |
+| placeholder  | 占位符           | `string`                         | `t('react_ui.placeholder.date')` |
+| defaultValue | 默认值           | `Dayjs`                          | `dayjs(null)`                    |
+| value        | 封面             | `Dayjs`                          | -                                |
+| onChange     | 值变化回调函数   | `(value: Dayjs) => void`         | -                                |

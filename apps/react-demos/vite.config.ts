@@ -10,42 +10,42 @@ import { defineConfig, loadEnv, splitVendorChunkPlugin } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig(({ mode }) => {
-	const env = loadEnv(mode, process.cwd())
-	return {
-		base: '/',
-		plugins: [
-			mdx({
-				remarkPlugins: [remarkGfm]
-			}),
-			splitVendorChunkPlugin(),
-			tsconfigPaths(),
-			react(),
-			unocss(),
-			visualizer() as PluginOption
-		],
-		optimizeDeps: {
-			exclude: [...excludeDeps]
-		},
-		resolve: {
-			alias: {
-				'@': resolve(__dirname, 'src')
-			}
-		},
-		build: {
-			target: 'es2015'
-		},
-		server: {
-			host: '0.0.0.0',
-			open: true,
-			cors: true,
-			proxy: {
-				'/proxy': {
-					target: env.VITE_LOCAL_PROXY_BASE_URL,
-					changeOrigin: true,
-					secure: false,
-					rewrite: path => path.replace(/^\/proxy/, '')
-				}
-			}
-		}
-	}
+  const env = loadEnv(mode, process.cwd())
+  return {
+    base: '/',
+    plugins: [
+      mdx({
+        remarkPlugins: [remarkGfm]
+      }),
+      splitVendorChunkPlugin(),
+      tsconfigPaths(),
+      react(),
+      unocss(),
+      visualizer() as PluginOption
+    ],
+    optimizeDeps: {
+      exclude: [...excludeDeps]
+    },
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, 'src')
+      }
+    },
+    build: {
+      target: 'es2015'
+    },
+    server: {
+      host: '0.0.0.0',
+      open: true,
+      cors: true,
+      proxy: {
+        '/proxy': {
+          target: env.VITE_LOCAL_PROXY_BASE_URL,
+          changeOrigin: true,
+          secure: false,
+          rewrite: path => path.replace(/^\/proxy/, '')
+        }
+      }
+    }
+  }
 })

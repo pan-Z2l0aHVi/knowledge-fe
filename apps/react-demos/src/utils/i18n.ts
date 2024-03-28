@@ -7,22 +7,22 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
 i18next
-	.use(LanguageDetector)
-	.use(initReactI18next)
-	.init({
-		fallbackLng: 'zh',
-		resources: {
-			zh: {
-				translation: {
-					...uiZH,
-					...rteZH
-				}
-			},
-			en: {
-				translation: {
-					...uiEN,
-					...rteEN
-				}
-			}
-		}
-	})
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'zh',
+    resources: {
+      zh: {
+        translation: {
+          ...uiZH,
+          ...rteZH
+        }
+      },
+      en: {
+        translation: {
+          ...uiEN,
+          ...rteEN
+        }
+      }
+    }
+  })

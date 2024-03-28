@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import LoadingMDX from './loading.mdx'
 
 export default function LoadingDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.loading')} component={LoadingMDX} />
+  return <Demo heading={t('page.title.loading')} component={LoadingMDX} />
 }

@@ -4,7 +4,7 @@ export const UI_PREFIX = 'ui'
 export const UI_EDITOR_PREFIX = `${UI_PREFIX}-rte`
 
 export interface ButtonProps<T = any> {
-	editor: Editor
-	extension?: Extension<T>
-	tooltip?: boolean
+  editor: Editor
+  extension?: Extension<T>
+  tooltip?: boolean
 }

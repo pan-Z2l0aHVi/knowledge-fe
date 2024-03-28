@@ -11,25 +11,25 @@ import PageProgress from './components/page-progress'
 const PreferencesModal = lazy(() => import('./components/preferences-modal'))
 
 export default function App() {
-	const is_mobile = useUIStore(state => state.is_mobile)
-	useRouteScrollTop()
-	useInitApp()
+  const is_mobile = useUIStore(state => state.is_mobile)
+  useRouteScrollTop()
+  useInitApp()
 
-	const global_els = (
-		<>
-			<PageProgress />
-			<Suspense>
-				<PreferencesModal />
-			</Suspense>
-		</>
-	)
+  const global_els = (
+    <>
+      <PageProgress />
+      <Suspense>
+        <PreferencesModal />
+      </Suspense>
+    </>
+  )
 
-	return (
-		<>
-			{global_els}
+  return (
+    <>
+      {global_els}
 
-			{is_mobile ? <MobileLayout /> : <DesktopLayout />}
-			<FabBar />
-		</>
-	)
+      {is_mobile ? <MobileLayout /> : <DesktopLayout />}
+      <FabBar />
+    </>
+  )
 }

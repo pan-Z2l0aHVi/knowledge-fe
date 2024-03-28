@@ -2,8 +2,8 @@
 
 ## 代码演示
 
-import { useState } from 'react'
 import { Slider, Space } from '@youknown/react-ui/src'
+import { useState } from 'react'
 
 ---
 
@@ -28,8 +28,8 @@ export function BasicUsage() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Slider, Space } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   return (
@@ -58,8 +58,8 @@ export function Controllable() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Slider } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [value, setValue] = useState(70)
@@ -101,14 +101,14 @@ export default () => {
 
 ### Slider Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| vertical    | 是否垂直           | `boolean`         | `false`  |
-| tooltipFormatter    | 提示语格式化函数           | `(value: number) => string`         | `(x: number) => String(Math.round(x))`  |
-| min    | 最小值           | `number`         | `0`  |
-| max    | 最大值           | `number`         | `100`  |
-| step    | 跨度           | `number`         | `5`  |
-| defaultValue    | 默认值           | `number`         | `props.min`  |
-| value    | 值           | `number`         | -  |
-| onChange    | 值改变事件           | `(value: number) => void`         | -  |
+| 属性             | 说明             | 类型                        | 默认值                                 |
+| ---------------- | ---------------- | --------------------------- | -------------------------------------- |
+| disabled         | 是否禁用         | `boolean`                   | `false`                                |
+| vertical         | 是否垂直         | `boolean`                   | `false`                                |
+| tooltipFormatter | 提示语格式化函数 | `(value: number) => string` | `(x: number) => String(Math.round(x))` |
+| min              | 最小值           | `number`                    | `0`                                    |
+| max              | 最大值           | `number`                    | `100`                                  |
+| step             | 跨度             | `number`                    | `5`                                    |
+| defaultValue     | 默认值           | `number`                    | `props.min`                            |
+| value            | 值               | `number`                    | -                                      |
+| onChange         | 值改变事件       | `(value: number) => void`   | -                                      |

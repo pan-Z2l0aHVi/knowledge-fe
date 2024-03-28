@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import RadioMDX from './radio.mdx'
 
 export default function RadioDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.radio')} component={RadioMDX} />
+  return <Demo heading={t('page.title.radio')} component={RadioMDX} />
 }

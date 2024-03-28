@@ -6,12 +6,12 @@ import { presetScrollbar } from 'unocss-scrollbar-variant'
 import { shortcuts, theme } from '../../build/unocss'
 
 export default defineConfig({
-	presets: [presetUno(), presetAutoprefixer(), presetRemToPx(), presetScrollbar()],
-	shortcuts: {
-		...shortcuts
-	},
-	rules: [],
-	theme: {
-		...theme
-	}
+  presets: [presetUno(), presetAutoprefixer(), presetRemToPx(), presetScrollbar()],
+  shortcuts: {
+    ...shortcuts
+  },
+  rules: [],
+  theme: {
+    ...theme
+  }
 })

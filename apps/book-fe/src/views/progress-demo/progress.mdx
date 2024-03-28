@@ -223,9 +223,9 @@ export function Circle() {
 ---
 
 ```tsx
+import { Button, Divider, Progress, Space } from '@youknown/react-ui'
 import { useState } from 'react'
 import { TbMinus, TbPlus } from 'react-icons/tb'
-import { Button, Divider, Progress, Space } from '@youknown/react-ui'
 
 export default () => {
   const [percent, setPercent] = useState(70)
@@ -296,23 +296,23 @@ export default () => {
 
 ### Progress Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| size    | 大小           | `'small' \| 'medium' \| 'large'`         | `'medium'`  |
-| defaultPercent    | 默认百分比           | `number`         | `0`  |
-| percent    | 百分比           | `number`         | `0`  |
-| direction    | 方向           | `'horizontal' \| 'vertical'`         | `'horizontal'`  |
-| trackColor    | 进度轨道颜色           | `string`         | -  |
-| suffix    | 后缀           | `React.ReactNode`         | `'%'`  |
-| format    | 格式化函数           | `(ref: RenderCounterProps) => React.ReactNode`         | -  |
+| 属性           | 说明         | 类型                                           | 默认值         |
+| -------------- | ------------ | ---------------------------------------------- | -------------- |
+| size           | 大小         | `'small' \| 'medium' \| 'large'`               | `'medium'`     |
+| defaultPercent | 默认百分比   | `number`                                       | `0`            |
+| percent        | 百分比       | `number`                                       | `0`            |
+| direction      | 方向         | `'horizontal' \| 'vertical'`                   | `'horizontal'` |
+| trackColor     | 进度轨道颜色 | `string`                                       | -              |
+| suffix         | 后缀         | `React.ReactNode`                              | `'%'`          |
+| format         | 格式化函数   | `(ref: RenderCounterProps) => React.ReactNode` | -              |
 
 ### Progress Circle Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| size    | 大小           | `'small' \| 'medium' \| 'large'`         | `'medium'`  |
-| defaultMolecule    | 默认百分比           | `number`         | `0`  |
-| molecule    | 分子           | `number`         | `0`  |
-| denominator    | 分母           | `number`         | `100`  |
-| suffix    | 后缀           | `React.ReactNode`         | `'%'`  |
-| format    | 格式化函数           | `((props: RenderCounterProps) => ReactNode) \| null`         | -  |
+| 属性            | 说明       | 类型                                                 | 默认值     |
+| --------------- | ---------- | ---------------------------------------------------- | ---------- |
+| size            | 大小       | `'small' \| 'medium' \| 'large'`                     | `'medium'` |
+| defaultMolecule | 默认百分比 | `number`                                             | `0`        |
+| molecule        | 分子       | `number`                                             | `0`        |
+| denominator     | 分母       | `number`                                             | `100`      |
+| suffix          | 后缀       | `React.ReactNode`                                    | `'%'`      |
+| format          | 格式化函数 | `((props: RenderCounterProps) => ReactNode) \| null` | -          |

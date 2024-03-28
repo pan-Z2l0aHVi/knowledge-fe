@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import CollapseMDX from './collapse.mdx'
 
 export default function CollapseDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.collapse')} component={CollapseMDX} />
+  return <Demo heading={t('page.title.collapse')} component={CollapseMDX} />
 }

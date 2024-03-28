@@ -2,19 +2,15 @@
 
 ## 代码演示
 
+import { Button, Divider, Radio, Space, Switch, Tabs } from '@youknown/react-ui/src'
 import { useEffect, useState } from 'react'
-import { Radio, Divider, Space, Switch, Tabs, Button } from '@youknown/react-ui/src'
 
 ---
 
 ### 基本用法
 
 export function BasicUsage() {
-  return (
-    <Radio defaultValue={true}>
-      Basic
-    </Radio>
-  )
+  return <Radio defaultValue={true}>Basic</Radio>
 }
 
 <BasicUsage />
@@ -24,11 +20,7 @@ export function BasicUsage() {
 ```tsx
 import { Radio } from '@youknown/react-ui'
 export default () => {
-  return (
-    <Radio defaultValue={true}>
-      Basic
-    </Radio>
-  )
+  return <Radio defaultValue={true}>Basic</Radio>
 }
 ```
 
@@ -55,7 +47,7 @@ export function Controlled() {
 ---
 
 ```tsx
-import { Radio, Space, Divider, Button } from '@youknown/react-ui'
+import { Button, Divider, Radio, Space } from '@youknown/react-ui'
 import { useState } from 'react'
 
 export default () => {
@@ -154,8 +146,8 @@ export function RadioGroup() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Radio } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [groupVal, setGroupVal] = useState(2)
@@ -185,7 +177,9 @@ export function RadioDisabled() {
       <Switch value={disabled} onChange={setDisabled} />
       <Divider />
       <Space direction="vertical">
-        <Radio disabled={disabled} defaultValue={true}>Disabled</Radio>
+        <Radio disabled={disabled} defaultValue={true}>
+          Disabled
+        </Radio>
         <Radio.Group
           disabled={disabled}
           defaultValue={0}
@@ -212,7 +206,9 @@ export default () => {
       <Switch value={disabled} onChange={setDisabled} />
       <Divider />
       <Space direction="vertical">
-        <Radio disabled={disabled} defaultValue={true}>Disabled</Radio>
+        <Radio disabled={disabled} defaultValue={true}>
+          Disabled
+        </Radio>
         <Radio.Group
           disabled={disabled}
           defaultValue={0}
@@ -284,31 +280,31 @@ export default () => {
 
 ### Radio Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| size       | 大小               | `'small'`         | `'small' \| 'medium' \| 'large'`  |
-| label    | 标识id           | `string \| number`         | -  |
-| defaultValue    | 默认值           | `boolean`         | `false`  |
-| value    |  是否选中          | `boolean`         | -  |
-| onChange    |  选中事件回调          | `(value: boolean) => void`         | -  |
+| 属性         | 说明         | 类型                       | 默认值                           |
+| ------------ | ------------ | -------------------------- | -------------------------------- |
+| disabled     | 禁用状态     | `boolean`                  | `false`                          |
+| size         | 大小         | `'small'`                  | `'small' \| 'medium' \| 'large'` |
+| label        | 标识id       | `string \| number`         | -                                |
+| defaultValue | 默认值       | `boolean`                  | `false`                          |
+| value        | 是否选中     | `boolean`                  | -                                |
+| onChange     | 选中事件回调 | `(value: boolean) => void` | -                                |
 
 ### Radio.Group Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| size       | 大小               | `'small'`         | `'small' \| 'medium' \| 'large'`  |
-| defaultValue    | 默认值           | `string \| number`         | `[]`  |
-| value    | 选中值           | `string \| number`         | -  |
-| onChange    | 选中事件回调           | `(value: string \| number) => void`         | -  |
-| direction    | 方向           | `'vertical' \| 'horizontal'`         | `'horizontal'`  |
-| options    | 可选项列表           | `Options`         | `[]`  |
+| 属性         | 说明         | 类型                                | 默认值                           |
+| ------------ | ------------ | ----------------------------------- | -------------------------------- |
+| disabled     | 禁用状态     | `boolean`                           | `false`                          |
+| size         | 大小         | `'small'`                           | `'small' \| 'medium' \| 'large'` |
+| defaultValue | 默认值       | `string \| number`                  | `[]`                             |
+| value        | 选中值       | `string \| number`                  | -                                |
+| onChange     | 选中事件回调 | `(value: string \| number) => void` | -                                |
+| direction    | 方向         | `'vertical' \| 'horizontal'`        | `'horizontal'`                   |
+| options      | 可选项列表   | `Options`                           | `[]`                             |
 
 ### Options
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| label    | 标识id           | `string \| number`         | -  |
-| child    | 子元素           | `React.ReactNode`         | -  |
+| 参数     | 说明     | 类型               | 默认值  |
+| -------- | -------- | ------------------ | ------- |
+| disabled | 禁用状态 | `boolean`          | `false` |
+| label    | 标识id   | `string \| number` | -       |
+| child    | 子元素   | `React.ReactNode`  | -       |

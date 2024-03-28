@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import FormMDX from './form.mdx'
 
 export default function FormDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.form')} component={FormMDX} />
+  return <Demo heading={t('page.title.form')} component={FormMDX} />
 }

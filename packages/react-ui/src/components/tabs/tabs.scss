@@ -2,163 +2,220 @@
 
 $prefix: '#{$ui-prefix}-tabs';
 .#{$prefix} {
-	@include basic;
+  @include basic;
 
-	display: flex;
-	max-width: max-content;
+  display: flex;
+  max-width: max-content;
 
-	&-segment-list {
-		display: flex;
-		padding: 2px;
-		background: $bg-3;
-		border-radius: calc($radius-m + 2px);
-	}
+  &-segment-list {
+    display: flex;
+    padding: 2px;
+    background: $bg-3;
+    border-radius: calc($radius-m + 2px);
+  }
 
-	&-tab-item {
-		cursor: pointer;
-		user-select: none;
-		display: flex;
-		align-items: center;
-		padding: 4px 0;
-		white-space: nowrap;
+  &-card-list {
+    display: flex;
+    padding: 4px 4px 0;
+    background: $bg-3;
+  }
 
-		&-close-icon {
-			margin-left: 4px;
-			padding: 2px 0 2px 2px;
-			font-size: 14px;
-			line-height: 0;
-			color: $text-3;
-		}
+  &-tab-item {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    white-space: nowrap;
 
-		&:focus-visible {
-			@include focus-outline;
-		}
+    &-close-icon {
+      margin-left: 4px;
+      padding: 2px 0 2px 2px;
+      font-size: 14px;
+      line-height: 0;
+      color: $text-3;
+    }
 
-		&-line {
-			min-height: 32px;
-			font-weight: 500;
-			color: $text-2;
-			border-bottom: 2px solid transparent;
+    &:focus-visible {
+      @include focus-outline;
+    }
 
-			&-disabled {
-				cursor: not-allowed;
-				opacity: $opacity-disabled;
-			}
+    &-line {
+      min-height: 32px;
+      font-weight: 500;
+      color: $text-2;
+      border-bottom: 2px solid transparent;
 
-			&:not(&-disabled) {
-				&:hover {
-					@media (hover: hover) {
-						color: $text-1;
-					}
-				}
+      &-disabled {
+        cursor: not-allowed;
+        opacity: $opacity-disabled;
+      }
 
-				&.#{$prefix}-tab-item-line-active {
-					color: $color-primary;
-					border-bottom: 2px solid $color-primary;
-				}
-			}
+      &:not(&-disabled) {
+        &:hover {
+          @media (hover: hover) {
+            color: $text-1;
+          }
+        }
 
-			.#{$prefix}-tab-item-close-icon {
-				&:hover {
-					@media (hover: hover) {
-						color: $color-primary;
-					}
-				}
-			}
-		}
+        &.#{$prefix}-tab-item-line-active {
+          color: $color-primary;
+          border-bottom: 2px solid $color-primary;
+        }
+      }
 
-		&-round {
-			min-height: 28px;
-			padding: 4px 10px;
-			border-radius: $round;
-			transition: all $duration-f;
+      .#{$prefix}-tab-item-close-icon {
+        &:hover {
+          @media (hover: hover) {
+            color: $color-primary;
+          }
+        }
+      }
+    }
 
-			&-disabled {
-				cursor: not-allowed;
-				opacity: $opacity-disabled;
-			}
+    &-round {
+      min-height: 28px;
+      padding: 4px 10px;
+      border-radius: $round;
+      transition: all $duration-f;
 
-			&:not(&-disabled) {
-				&:hover {
-					@media (hover: hover) {
-						background-color: $color-hover;
-					}
-				}
+      &-disabled {
+        cursor: not-allowed;
+        opacity: $opacity-disabled;
+      }
 
-				&:active {
-					background-color: $color-active;
-				}
+      &:not(&-disabled) {
+        &:hover {
+          @media (hover: hover) {
+            background-color: $color-hover;
+          }
+        }
 
-				&.#{$prefix}-tab-item-round-active {
-					color: #fff;
-					background-color: $color-primary;
+        &:active {
+          background-color: $color-active;
+        }
 
-					.#{$prefix}-tab-item-close-icon {
-						color: #fff;
-					}
-				}
-			}
+        &.#{$prefix}-tab-item-round-active {
+          color: #fff;
+          background-color: $color-primary;
 
-			.#{$prefix}-tab-item-close-icon {
-				margin-right: -4px;
+          .#{$prefix}-tab-item-close-icon {
+            color: #fff;
+          }
+        }
+      }
 
-				&:hover {
-					@media (hover: hover) {
-						color: $color-primary;
-					}
-				}
-			}
-		}
+      .#{$prefix}-tab-item-close-icon {
+        margin-right: -4px;
 
-		&-segment {
-			display: flex;
-			align-items: center;
-			height: 28px;
-			padding: 4px 16px;
-			color: $text-2;
-			background-color: $bg-3;
-			border-radius: $radius-m;
+        &:hover {
+          @media (hover: hover) {
+            color: $color-primary;
+          }
+        }
+      }
+    }
 
-			&-disabled {
-				cursor: not-allowed;
-				opacity: $opacity-disabled;
-			}
+    &-segment {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 4px 16px;
+      color: $text-2;
+      background-color: $bg-3;
+      border-radius: $radius-m;
 
-			&:not(&-disabled) {
-				&:hover {
-					@media (hover: hover) {
-						background-color: $color-secondary-hover;
-					}
-				}
+      &-disabled {
+        cursor: not-allowed;
+        opacity: $opacity-disabled;
+      }
 
-				&:active {
-					background-color: $color-secondary-active;
-				}
+      &:not(&-disabled) {
+        &:hover {
+          @media (hover: hover) {
+            background-color: $color-secondary-hover;
+          }
+        }
 
-				&.#{$prefix}-tab-item-segment-active {
-					z-index: 1;
-					color: $text-1;
-					background-color: $bg-0;
-					box-shadow: 0 1px 4px rgba($color: #000, $alpha: 0.1);
-				}
+        &:active {
+          background-color: $color-secondary-active;
+        }
 
-				.#{$prefix}-tab-item-close-icon {
-					margin-right: -4px;
-					margin-left: 8px;
-					padding: 2px;
-					border-radius: $radius-m;
+        &.#{$prefix}-tab-item-segment-active {
+          z-index: 1;
+          color: $text-1;
+          background-color: $bg-0;
+          box-shadow: 0 1px 4px rgba($color: #000, $alpha: 0.1);
+        }
 
-					&:hover {
-						@media (hover: hover) {
-							background-color: $color-secondary-hover;
-						}
-					}
+        .#{$prefix}-tab-item-close-icon {
+          margin-right: -4px;
+          margin-left: 8px;
+          padding: 2px;
+          border-radius: $radius-m;
 
-					&:active {
-						background-color: $color-secondary-active;
-					}
-				}
-			}
-		}
-	}
+          &:hover {
+            @media (hover: hover) {
+              background-color: $color-secondary-hover;
+            }
+          }
+
+          &:active {
+            background-color: $color-secondary-active;
+          }
+        }
+      }
+    }
+
+    &-card {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 4px 16px;
+      color: $text-2;
+      background-color: $bg-3;
+      border-radius: $radius-m;
+
+      &-disabled {
+        cursor: not-allowed;
+        opacity: $opacity-disabled;
+      }
+
+      &:not(&-disabled) {
+        &:hover {
+          @media (hover: hover) {
+            background-color: $color-secondary-hover;
+          }
+        }
+
+        &:active {
+          background-color: $color-secondary-active;
+        }
+
+        &.#{$prefix}-tab-item-card-active {
+          z-index: 1;
+          color: $text-1;
+          background-color: $bg-0;
+          border-radius: $radius-m $radius-m 0 0;
+        }
+
+        .#{$prefix}-tab-item-close-icon {
+          margin-right: -4px;
+          margin-left: 8px;
+          padding: 2px;
+          border-radius: $radius-m;
+
+          &:hover {
+            @media (hover: hover) {
+              background-color: $color-secondary-hover;
+            }
+          }
+
+          &:active {
+            background-color: $color-secondary-active;
+          }
+        }
+      }
+    }
+  }
 }

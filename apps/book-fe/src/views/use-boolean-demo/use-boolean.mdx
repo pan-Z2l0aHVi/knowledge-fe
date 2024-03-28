@@ -17,15 +17,11 @@ export function BasicUsage() {
     <div>
       <p>Effects：{JSON.stringify(bol)}</p>
       <p>
-        <Button onClick={setReverse}>
-          Toggle
-        </Button>
+        <Button onClick={setReverse}>Toggle</Button>
         <Button onClick={setFalse} className="m-[0_16px]">
           Set false
         </Button>
-        <Button onClick={setTrue}>
-          Set true
-        </Button>
+        <Button onClick={setTrue}>Set true</Button>
       </p>
     </div>
   )
@@ -45,15 +41,11 @@ export default () => {
     <div>
       <p>Effects：{JSON.stringify(bol)}</p>
       <p>
-        <Button onClick={setReverse}>
-          Toggle
-        </Button>
+        <Button onClick={setReverse}>Toggle</Button>
         <Button onClick={setFalse} className="m-[0_16px]">
           Set false
         </Button>
-        <Button onClick={setTrue}>
-          Set true
-        </Button>
+        <Button onClick={setTrue}>Set true</Button>
       </p>
     </div>
   )
@@ -68,22 +60,22 @@ export default () => {
 
 ### Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| defaultValue    | 默认值           | `boolean`         | `false`  |
+| 参数         | 说明   | 类型      | 默认值  |
+| ------------ | ------ | --------- | ------- |
+| defaultValue | 默认值 | `boolean` | `false` |
 
 ### Result
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| state    | 状态值           | `boolean`         |
-| action    | 操作集合           | `Action`         |
+| 参数   | 说明     | 类型      |
+| ------ | -------- | --------- |
+| state  | 状态值   | `boolean` |
+| action | 操作集合 | `Action`  |
 
 ### Action
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| setTrue    | 设置state为true           | `() => void`         |
-| setFalse    | 设置state为false           | `() => void`         |
-| setReverse    | state取反           | `() => void`         |
-| setBool    | 设置state           | `React.Dispatch<React.SetStateAction<boolean>>`         |
+| 参数       | 说明             | 类型                                            |
+| ---------- | ---------------- | ----------------------------------------------- |
+| setTrue    | 设置state为true  | `() => void`                                    |
+| setFalse   | 设置state为false | `() => void`                                    |
+| setReverse | state取反        | `() => void`                                    |
+| setBool    | 设置state        | `React.Dispatch<React.SetStateAction<boolean>>` |

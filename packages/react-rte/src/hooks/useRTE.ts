@@ -13,33 +13,33 @@ import { useEditor } from '@tiptap/react'
 import type { DependencyList } from 'react'
 
 interface RTEOptions extends Partial<EditorOptions> {
-	placeholder?: PlaceholderOptions['placeholder']
+  placeholder?: PlaceholderOptions['placeholder']
 }
 export function useRTE(options?: RTEOptions, deps?: DependencyList) {
-	const extensions = options?.extensions ?? []
-	const placeholder = options?.placeholder ?? ''
-	return useEditor(
-		{
-			...options,
-			extensions: extensions.concat([
-				Document,
-				Text,
-				Paragraph,
-				Dropcursor.configure({
-					color: 'var(--ui-color-primary)',
-					width: 4
-				}),
-				Gapcursor,
-				History,
-				CharacterCount,
-				ListItem,
-				Placeholder.configure({
-					placeholder
-				})
-			])
-		},
-		deps
-	)
+  const extensions = options?.extensions ?? []
+  const placeholder = options?.placeholder ?? ''
+  return useEditor(
+    {
+      ...options,
+      extensions: extensions.concat([
+        Document,
+        Text,
+        Paragraph,
+        Dropcursor.configure({
+          color: 'var(--ui-color-primary)',
+          width: 4
+        }),
+        Gapcursor,
+        History,
+        CharacterCount,
+        ListItem,
+        Placeholder.configure({
+          placeholder
+        })
+      ])
+    },
+    deps
+  )
 }
 
 export default useRTE

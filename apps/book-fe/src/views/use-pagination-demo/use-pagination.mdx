@@ -2,9 +2,9 @@
 
 ## 代码演示
 
-import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 import { usePagination } from '@youknown/react-hook/src'
 import { Button, Space } from '@youknown/react-ui/src'
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 
 ---
 
@@ -41,53 +41,53 @@ export function BasicUsage() {
       page_size: pageSize
     })
 
-  const { pagination, data, loading, run: do_fetch } = usePagination(fetcher)
-  const { page, pageSize, changePage } = pagination
-  return (
-    <>
-      <Button onClick={do_fetch}>Request</Button>
-      <div className="pt-24px">
-        {loading ? (
-          <div>loading...</div>
-        ) : (
-          <div>
-            {data?.list.map(item => {
-              return <div key={item.id}>{item.content}</div>
-            })}
-          </div>
-        )}
-        <Space className="mt-16px" align="center">
-          <Button
-            square
-            onClick={() => {
-              changePage(p => p - 1)
-            }}
-          >
-            <MdOutlineArrowBackIos />
-          </Button>
-          <span className="min-w-40px text-center">{page}</span>
-          <Button
-            square
-            onClick={() => {
-              changePage(p => p + 1)
-            }}
-          >
-            <MdOutlineArrowForwardIos />
-          </Button>
-        </Space>
+const { pagination, data, loading, run: do_fetch } = usePagination(fetcher)
+const { page, pageSize, changePage } = pagination
+return (
+
+<>
+  <Button onClick={do_fetch}>Request</Button>
+  <div className="pt-24px">
+    {loading ? (
+      <div>loading...</div>
+    ) : (
+      <div>
+        {data?.list.map(item => {
+          return <div key={item.id}>{item.content}</div>
+        })}
       </div>
-    </>
-  )
-}
+    )}
+    <Space className="mt-16px" align="center">
+      <Button
+        square
+        onClick={() => {
+          changePage(p => p - 1)
+        }}
+      >
+        <MdOutlineArrowBackIos />
+      </Button>
+      <span className="min-w-40px text-center">{page}</span>
+      <Button
+        square
+        onClick={() => {
+          changePage(p => p + 1)
+        }}
+      >
+        <MdOutlineArrowForwardIos />
+      </Button>
+    </Space>
+  </div>
+</>
+) }
 
 <BasicUsage />
 
 ---
 
 ```tsx
-import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 import { usePagination } from '@youknown/react-hook'
 import { Button, Space } from '@youknown/react-ui'
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 
 const LIST_TOTAL = 204
 const allList = Array.from(Array(LIST_TOTAL)).map((_, index) => ({
@@ -176,31 +176,32 @@ export default () => {
 
 参数继承自useFetch Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| initialPage    | 页码           | `number`         | `1`  |
-| initialPageSize    | 每页个数           | `number`         | `10`  |
+| 参数            | 说明     | 类型     | 默认值 |
+| --------------- | -------- | -------- | ------ |
+| initialPage     | 页码     | `number` | `1`    |
+| initialPageSize | 每页个数 | `number` | `10`   |
 
 ### Result
 
 返回结果继承自useFetch Result
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| pagination    | 分页返回结果           | `Pagination`         |
+| 参数       | 说明         | 类型         |
+| ---------- | ------------ | ------------ |
+| pagination | 分页返回结果 | `Pagination` |
 
 ### PaginationData
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| total    | 总数           | `number`         |
-| list    | 数据列表           | `any[]`         |
+
+| 参数  | 说明     | 类型     |
+| ----- | -------- | -------- |
+| total | 总数     | `number` |
+| list  | 数据列表 | `any[]`  |
 
 ### Pagination
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| page    | 页码           | `number`         |
-| pageSize    | 每页个数           | `number`         |
-| total    | 总数           | `number`         |
-| changePage    | 修改页码函数           | `React.Dispatch<React.SetStateAction>`         |
-| changePageSize    | 修改每页个数函数           | `React.Dispatch<React.SetStateAction>`         |
+| 参数           | 说明             | 类型                                   |
+| -------------- | ---------------- | -------------------------------------- |
+| page           | 页码             | `number`                               |
+| pageSize       | 每页个数         | `number`                               |
+| total          | 总数             | `number`                               |
+| changePage     | 修改页码函数     | `React.Dispatch<React.SetStateAction>` |
+| changePageSize | 修改每页个数函数 | `React.Dispatch<React.SetStateAction>` |

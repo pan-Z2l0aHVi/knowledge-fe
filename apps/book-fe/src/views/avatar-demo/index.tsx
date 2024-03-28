@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import AvatarMDX from './avatar.mdx'
 
 export default function AvatarDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.avatar')} component={AvatarMDX} />
+  return <Demo heading={t('page.title.avatar')} component={AvatarMDX} />
 }

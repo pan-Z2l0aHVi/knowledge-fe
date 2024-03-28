@@ -2,9 +2,9 @@
 
 ## 代码演示
 
-import { Divider, Loading, Space, Card, Button } from '@youknown/react-ui/src'
-import { TbLoader } from 'react-icons/tb'
+import { Button, Card, Divider, Loading, Space } from '@youknown/react-ui/src'
 import { useState } from 'react'
+import { TbLoader } from 'react-icons/tb'
 
 ---
 
@@ -29,7 +29,7 @@ export function BasicUsage() {
 ---
 
 ```tsx
-import { Loading, Divider, Space } from '@youknown/react-ui'
+import { Divider, Loading, Space } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -141,17 +141,15 @@ export function LoadingContainer() {
 ---
 
 ```tsx
-import { Loading, Space, Button } from '@youknown/react-ui'
-import { TbLoader } from 'react-icons/tb'
+import { Button, Loading, Space } from '@youknown/react-ui'
 import { useState } from 'react'
+import { TbLoader } from 'react-icons/tb'
 
 export default () => {
   const [spinning, setSpinning] = useState(true)
   return (
     <Space direction="vertical">
-      <Button onClick={() => setSpinning(p => !p)}>
-        {spinning ? 'Cancel' : 'Start'} spinning
-      </Button>
+      <Button onClick={() => setSpinning(p => !p)}>{spinning ? 'Cancel' : 'Start'} spinning</Button>
       <Space>
         <Loading spinning={spinning} />
         <Loading spinning={spinning}>
@@ -184,7 +182,7 @@ export function LoadingDesc() {
 ---
 
 ```tsx
-import { Loading, Card } from '@youknown/react-ui'
+import { Card, Loading } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -199,10 +197,10 @@ export default () => {
 
 ### Loading Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| spinning    | 加载中           | `boolean`         | `false`  |
-| bordered    | 有边框           | `boolean`         | `false`  |
-| size    | 大小           | `'small' \| 'medium' \| 'large'`         | `medium`  |
-| icon    | 图标           | `React.ReactNode`         | -  |
-| description    | 描述           | `React.ReactNode`         | -  |
+| 属性        | 说明   | 类型                             | 默认值   |
+| ----------- | ------ | -------------------------------- | -------- |
+| spinning    | 加载中 | `boolean`                        | `false`  |
+| bordered    | 有边框 | `boolean`                        | `false`  |
+| size        | 大小   | `'small' \| 'medium' \| 'large'` | `medium` |
+| icon        | 图标   | `React.ReactNode`                | -        |
+| description | 描述   | `React.ReactNode`                | -        |

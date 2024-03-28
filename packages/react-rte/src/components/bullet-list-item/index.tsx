@@ -9,27 +9,27 @@ import { PiListDashesBold } from 'react-icons/pi'
 import { UI_EDITOR_PREFIX } from '../../common'
 
 export default function BulletListItem(props: { editor: Editor }) {
-	const { editor } = props
-	const { t } = useTranslation()
-	const prefixCls = `${UI_EDITOR_PREFIX}-bullet-list-item`
-	return (
-		<Dropdown.Item
-			prefix={
-				<div
-					className={cls(prefixCls, {
-						active: editor.isActive('bulletlist'),
-						disabled: !editor.can().toggleBulletList()
-					})}
-				>
-					<PiListDashesBold />
-				</div>
-			}
-			closeAfterItemClick
-			onClick={() => {
-				editor.chain().focus().toggleBulletList().run()
-			}}
-		>
-			{t('react_rte.bulletlist')}
-		</Dropdown.Item>
-	)
+  const { editor } = props
+  const { t } = useTranslation()
+  const prefixCls = `${UI_EDITOR_PREFIX}-bullet-list-item`
+  return (
+    <Dropdown.Item
+      prefix={
+        <div
+          className={cls(prefixCls, {
+            active: editor.isActive('bulletlist'),
+            disabled: !editor.can().toggleBulletList()
+          })}
+        >
+          <PiListDashesBold />
+        </div>
+      }
+      closeAfterItemClick
+      onClick={() => {
+        editor.chain().focus().toggleBulletList().run()
+      }}
+    >
+      {t('react_rte.bulletlist')}
+    </Dropdown.Item>
+  )
 }

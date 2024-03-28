@@ -2,19 +2,15 @@
 
 ## 代码演示
 
+import { Button, Checkbox, Divider, Space, Switch, Tabs } from '@youknown/react-ui/src'
 import { useEffect, useState } from 'react'
-import { Checkbox, Divider, Space, Button, Switch, Tabs } from '@youknown/react-ui/src'
 
 ---
 
 ### 基本用法
 
 export function BasicUsage() {
-  return (
-    <Checkbox defaultValue={true}>
-      Basic
-    </Checkbox>
-  )
+  return <Checkbox defaultValue={true}>Basic</Checkbox>
 }
 
 <BasicUsage />
@@ -24,11 +20,7 @@ export function BasicUsage() {
 ```tsx
 import { Checkbox } from '@youknown/react-ui'
 export default () => {
-  return (
-    <Checkbox defaultValue={true}>
-      Basic
-    </Checkbox>
-  )
+  return <Checkbox defaultValue={true}>Basic</Checkbox>
 }
 ```
 
@@ -55,7 +47,7 @@ export function Controlled() {
 ---
 
 ```tsx
-import { Checkbox, Space, Divider, Button } from '@youknown/react-ui'
+import { Button, Checkbox, Divider, Space } from '@youknown/react-ui'
 
 export default () => {
   const [val, setVal] = useState(false)
@@ -184,7 +176,9 @@ export function CheckboxDisabled() {
       <Switch value={disabled} onChange={setDisabled} />
       <Divider />
       <Space direction="vertical">
-        <Checkbox disabled={disabled} defaultValue={true}>Disabled</Checkbox>
+        <Checkbox disabled={disabled} defaultValue={true}>
+          Disabled
+        </Checkbox>
         <Checkbox.Group
           disabled={disabled}
           defaultValue={[0, 1]}
@@ -204,7 +198,7 @@ export function CheckboxDisabled() {
 ---
 
 ```tsx
-import { Checkbox, Switch, Divider, Space } from '@youknown/react-ui'
+import { Checkbox, Divider, Space, Switch } from '@youknown/react-ui'
 import { useState } from 'react'
 
 export default () => {
@@ -214,7 +208,9 @@ export default () => {
       <Switch value={disabled} onChange={setDisabled} />
       <Divider />
       <Space direction="vertical">
-        <Checkbox disabled={disabled} defaultValue={true}>Disabled</Checkbox>
+        <Checkbox disabled={disabled} defaultValue={true}>
+          Disabled
+        </Checkbox>
         <Checkbox.Group
           disabled={disabled}
           defaultValue={[0, 1]}
@@ -289,32 +285,31 @@ export default () => {
 
 ### Checkbox Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| size       | 大小               | `'small'`         | `'small' \| 'medium' \| 'large'`  |
-| label    | 标识id           | `string \| number`         | -  |
-| defaultValue    | 默认值           | `boolean`         | `false`  |
-| value    |  是否选中          | `boolean`         | -  |
-| onChange    |  选中事件回调          | `(value: boolean) => void`         | -  |
+| 属性         | 说明         | 类型                       | 默认值                           |
+| ------------ | ------------ | -------------------------- | -------------------------------- |
+| disabled     | 禁用状态     | `boolean`                  | `false`                          |
+| size         | 大小         | `'small'`                  | `'small' \| 'medium' \| 'large'` |
+| label        | 标识id       | `string \| number`         | -                                |
+| defaultValue | 默认值       | `boolean`                  | `false`                          |
+| value        | 是否选中     | `boolean`                  | -                                |
+| onChange     | 选中事件回调 | `(value: boolean) => void` | -                                |
 
 ### Checkbox.Group Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| size       | 大小               | `'small'`         | `'small' \| 'medium' \| 'large'`  |
-| defaultValue    | 默认值           | `(string \| number)[]`         | `[]`  |
-| value    | 选中值           | `(string \| number)[]`         | -  |
-| onChange    | 选中事件回调           | `(value: (string \| number)[]) => void`         | -  |
-| direction    | 方向           | `'vertical' \| 'horizontal'`         | `'horizontal'`  |
-| options    | 可选项列表           | `Options`         | `[]`  |
+| 属性         | 说明         | 类型                                    | 默认值                           |
+| ------------ | ------------ | --------------------------------------- | -------------------------------- |
+| disabled     | 禁用状态     | `boolean`                               | `false`                          |
+| size         | 大小         | `'small'`                               | `'small' \| 'medium' \| 'large'` |
+| defaultValue | 默认值       | `(string \| number)[]`                  | `[]`                             |
+| value        | 选中值       | `(string \| number)[]`                  | -                                |
+| onChange     | 选中事件回调 | `(value: (string \| number)[]) => void` | -                                |
+| direction    | 方向         | `'vertical' \| 'horizontal'`            | `'horizontal'`                   |
+| options      | 可选项列表   | `Options`                               | `[]`                             |
 
 ### Options
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| disabled   | 禁用状态           | `boolean`         | `false`  |
-| label    | 标识id           | `string \| number`         | -  |
-| child    | 子元素           | `React.ReactNode`         | -  |
-
+| 参数     | 说明     | 类型               | 默认值  |
+| -------- | -------- | ------------------ | ------- |
+| disabled | 禁用状态 | `boolean`          | `false` |
+| label    | 标识id   | `string \| number` | -       |
+| child    | 子元素   | `React.ReactNode`  | -       |

@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import SliderMDX from './slider.mdx'
 
 export default function SliderDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.slider')} component={SliderMDX} />
+  return <Demo heading={t('page.title.slider')} component={SliderMDX} />
 }

@@ -9,33 +9,33 @@ import { ListCtx } from './ListCtx'
 import { ListItem } from './ListItem'
 
 export interface ListProps extends HTMLAttributes<HTMLDivElement> {
-	size?: 'small' | 'medium' | 'large'
-	bordered?: boolean
+  size?: 'small' | 'medium' | 'large'
+  bordered?: boolean
 }
 
 const _List = (props: ListProps, propRef: ForwardedRef<HTMLDivElement>) => {
-	const { className, children, size = 'medium', bordered = true, ...rest } = props
+  const { className, children, size = 'medium', bordered = true, ...rest } = props
 
-	const prefixCls = `${UI_PREFIX}-list`
+  const prefixCls = `${UI_PREFIX}-list`
 
-	return (
-		<ListCtx.Provider value={{ size, bordered }}>
-			<div
-				ref={propRef}
-				className={cls(className, prefixCls, {
-					[`${prefixCls}-bordered`]: bordered
-				})}
-				{...rest}
-			>
-				{children}
-			</div>
-		</ListCtx.Provider>
-	)
+  return (
+    <ListCtx.Provider value={{ size, bordered }}>
+      <div
+        ref={propRef}
+        className={cls(className, prefixCls, {
+          [`${prefixCls}-bordered`]: bordered
+        })}
+        {...rest}
+      >
+        {children}
+      </div>
+    </ListCtx.Provider>
+  )
 }
 _List.displayName = 'List'
 
 const RefList = forwardRef(_List)
 export const List = RefList as typeof RefList & {
-	Item: typeof ListItem
+  Item: typeof ListItem
 }
 List.Item = ListItem

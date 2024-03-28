@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import TabsMDX from './tabs.mdx'
 
 export default function TabsDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.tabs')} component={TabsMDX} />
+  return <Demo heading={t('page.title.tabs')} component={TabsMDX} />
 }

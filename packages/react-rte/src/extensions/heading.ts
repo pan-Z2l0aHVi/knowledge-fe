@@ -5,17 +5,17 @@ import HeadingItem from '../components/heading-item'
 import HeadingPicker from '../components/heading-picker'
 
 export default TiptapHeading.extend<
-	HeadingOptions & {
-		menu: typeof HeadingPicker
-		floating: typeof HeadingItem
-	}
+  HeadingOptions & {
+    menu: typeof HeadingPicker
+    floating: typeof HeadingItem
+  }
 >({
-	addOptions() {
-		return {
-			...this.parent?.(),
-			levels: [1, 2, 3, 4],
-			menu: HeadingPicker,
-			floating: HeadingItem
-		}
-	}
+  addOptions() {
+    return {
+      ...this.parent?.(),
+      levels: [1, 2, 3, 4],
+      menu: HeadingPicker,
+      floating: HeadingItem
+    }
+  }
 })

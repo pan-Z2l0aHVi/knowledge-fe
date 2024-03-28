@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import DialogMDX from './dialog.mdx'
 
 export default function DialogDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.dialog')} component={DialogMDX} />
+  return <Demo heading={t('page.title.dialog')} component={DialogMDX} />
 }

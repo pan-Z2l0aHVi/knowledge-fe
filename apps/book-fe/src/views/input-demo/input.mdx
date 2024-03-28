@@ -2,9 +2,9 @@
 
 ## 代码演示
 
+import { Button, Divider, Input, Space } from '@youknown/react-ui/src'
 import { useRef, useState } from 'react'
 import { TbEyeOff, TbSearch } from 'react-icons/tb'
-import { Button, Divider, Input, Space } from '@youknown/react-ui/src'
 
 ---
 
@@ -33,7 +33,7 @@ export function InputSize() {
 ---
 
 ```tsx
-import { Space, Input } from '@youknown/react-ui'
+import { Input, Space } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -71,7 +71,7 @@ export function Controllable() {
 ---
 
 ```tsx
-import { Space, Input } from '@youknown/react-ui'
+import { Input, Space } from '@youknown/react-ui'
 
 export default () => {
   const [inputVal, setInputVal] = useState('Controlled input')
@@ -100,7 +100,7 @@ export function InputIcon() {
 ---
 
 ```tsx
-import { Space, Input } from '@youknown/react-ui'
+import { Input, Space } from '@youknown/react-ui'
 import { TbEyeOff, TbSearch } from 'react-icons/tb'
 
 export default () => {
@@ -116,9 +116,7 @@ export default () => {
 ### 可清空
 
 export function Clearable() {
-  return (
-    <Input placeholder="Allow clear" allowClear defaultValue="Allow clear" />
-  )
+  return <Input placeholder="Allow clear" allowClear defaultValue="Allow clear" />
 }
 
 <Clearable />
@@ -169,14 +167,14 @@ export function Disabled() {
 ```tsx
 import { Input, Space } from '@youknown/react-ui'
 
-export default () => (
+export default () => {
   return (
     <Space>
       <Input placeholder="Enabled" />
       <Input placeholder="Disabled" disabled />
     </Space>
   )
-)
+}
 ```
 
 ### 外部控制
@@ -211,8 +209,8 @@ export function InputRef() {
 ---
 
 ```tsx
+import { Button, Input, Space } from '@youknown/react-ui'
 import { useRef } from 'react'
-import { Input, Space, Button } from '@youknown/react-ui'
 
 export default () => {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -276,9 +274,7 @@ export default () => {
 ### 自适应高度
 
 export function AutoSize() {
-  return (
-    <Input.Textarea autosize placeholder="Autosize textarea" />
-  )
+  return <Input.Textarea autosize placeholder="Autosize textarea" />
 }
 
 <AutoSize />
@@ -297,35 +293,35 @@ export default () => {
 
 ### Input Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| type    | 输入框类型           | `string`         | `'text'`  |
-| size    | 大小           | `'small' \| 'medium' \| 'large'`         | `'medium'`  |
-| round    | 是否圆角           | `boolean`         | `false`  |
-| bordered    | 有边框           | `boolean`         | `true`  |
-| outline    | 有外框           | `boolean`         | `true`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| prefix    | 头部           | `React.ReactNode`         | -  |
-| suffix    | 底部           | `React.ReactNode`         | -  |
-| allowClear    | 是否展示清空按钮           | `boolean`         | `false`  |
-| autoFocus    | 是否自动聚焦           | `boolean`         | `false`  |
-| defaultValue    | 默认值           | `string`         | `''`  |
-| value    | 值           | `string`         | -  |
-| onChange    | 值变化回调函数           | `(value: string) => void`         | -  |
-| onEnter    | 是否自动聚焦           | `(value: string) => void`         | -  |
+| 属性         | 说明             | 类型                             | 默认值     |
+| ------------ | ---------------- | -------------------------------- | ---------- |
+| type         | 输入框类型       | `string`                         | `'text'`   |
+| size         | 大小             | `'small' \| 'medium' \| 'large'` | `'medium'` |
+| round        | 是否圆角         | `boolean`                        | `false`    |
+| bordered     | 有边框           | `boolean`                        | `true`     |
+| outline      | 有外框           | `boolean`                        | `true`     |
+| disabled     | 是否禁用         | `boolean`                        | `false`    |
+| prefix       | 头部             | `React.ReactNode`                | -          |
+| suffix       | 底部             | `React.ReactNode`                | -          |
+| allowClear   | 是否展示清空按钮 | `boolean`                        | `false`    |
+| autoFocus    | 是否自动聚焦     | `boolean`                        | `false`    |
+| defaultValue | 默认值           | `string`                         | `''`       |
+| value        | 值               | `string`                         | -          |
+| onChange     | 值变化回调函数   | `(value: string) => void`        | -          |
+| onEnter      | 是否自动聚焦     | `(value: string) => void`        | -          |
 
 ### Input Textarea Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| minRows    | 输入框类型           | `number`         | `1`  |
-| maxRows    | 输入框类型           | `number`         | `Infinity`  |
-| autosize    | 是否圆角           | `boolean`         | `false`  |
-| bordered    | 有边框           | `boolean`         | `true`  |
-| outline    | 有外框           | `boolean`         | `true`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| autoFocus    | 是否自动聚焦           | `boolean`         | `false`  |
-| defaultValue    | 默认值           | `string`         | `''`  |
-| value    | 值           | `string`         | -  |
-| onChange    | 值变化回调函数           | `(value: string) => void`         | -  |
-| onEnter    | 是否自动聚焦           | `(value: string) => void`         | -  |
+| 属性         | 说明           | 类型                      | 默认值     |
+| ------------ | -------------- | ------------------------- | ---------- |
+| minRows      | 输入框类型     | `number`                  | `1`        |
+| maxRows      | 输入框类型     | `number`                  | `Infinity` |
+| autosize     | 是否圆角       | `boolean`                 | `false`    |
+| bordered     | 有边框         | `boolean`                 | `true`     |
+| outline      | 有外框         | `boolean`                 | `true`     |
+| disabled     | 是否禁用       | `boolean`                 | `false`    |
+| autoFocus    | 是否自动聚焦   | `boolean`                 | `false`    |
+| defaultValue | 默认值         | `string`                  | `''`       |
+| value        | 值             | `string`                  | -          |
+| onChange     | 值变化回调函数 | `(value: string) => void` | -          |
+| onEnter      | 是否自动聚焦   | `(value: string) => void` | -          |

@@ -6,6 +6,7 @@
     "dbaeumer.vscode-eslint",
     "Vue.volar",
     "mrmlnc.vscode-scss",
-    "antfu.unocss"
+    "antfu.unocss",
+    "unifiedjs.vscode-mdx"
   ]
 }

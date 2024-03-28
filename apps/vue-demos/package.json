@@ -25,7 +25,7 @@
     "vant": "^4.8.7"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,vue}": "eslint --cache --fix",
+    "**/*.{js,ts,jsx,tsx,md,mdx,vue}": "eslint --cache --fix",
     "**/*.{css,scss,less}": "stylelint --fix"
   },
   "browserslist": [

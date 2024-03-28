@@ -5,10 +5,10 @@ import { ImagePreview } from './ImagePreview'
 import { preview } from './preview'
 
 interface ImageCommand {
-	preview: typeof preview
-	ImagePreview: typeof ImagePreview
-	crop: typeof crop
-	ImageCropper: typeof ImageCropper
+  preview: typeof preview
+  ImagePreview: typeof ImagePreview
+  crop: typeof crop
+  ImageCropper: typeof ImageCropper
 }
 export const Image = _Image as typeof _Image & ImageCommand
 Image.preview = preview

@@ -21,5 +21,16 @@
 	"rules": {
 		"simple-import-sort/imports": "error",
 		"simple-import-sort/exports": "error"
-	}
+	},
+	"overrides": [
+		{
+			"files": [
+				"**/*.mdx"
+			],
+			"extends": "plugin:mdx/recommended",
+			"settings": {
+				"mdx/code-blocks": true
+			}
+		}
+	]
 }

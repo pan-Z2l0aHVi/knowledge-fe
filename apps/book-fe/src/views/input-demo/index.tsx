@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import InputMDX from './input.mdx'
 
 export default function InputDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.input')} component={InputMDX} />
+  return <Demo heading={t('page.title.input')} component={InputMDX} />
 }

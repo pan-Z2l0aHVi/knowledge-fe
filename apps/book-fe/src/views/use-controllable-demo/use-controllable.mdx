@@ -14,11 +14,11 @@ import { useState } from 'react'
 
 export function UnControllable(props) {
   const [state, setState] = useControllable(props, {
-    defaultValue: '',
+    defaultValue: ''
   })
   return (
     <>
-      <input value={state} onChange={(e) => setState(e.target.value)} className="w300px" />
+      <input value={state} onChange={e => setState(e.target.value)} className="w300px" />
       <Button onClick={() => setState('')} className="ml-8px">
         Clear
       </Button>
@@ -33,13 +33,13 @@ export function UnControllable(props) {
 ```tsx
 import { useControllable } from '@youknown/react-hook'
 
-export default (props) => {
+export default props => {
   const [state, setState] = useControllable(props, {
-    defaultValue: '',
+    defaultValue: ''
   })
   return (
     <>
-      <input value={state} onChange={(e) => setState(e.target.value)} className="w300px" />
+      <input value={state} onChange={e => setState(e.target.value)} className="w300px" />
       <Button onClick={() => setState('')} className="ml-8px">
         Clear
       </Button>
@@ -52,9 +52,9 @@ export default (props) => {
 
 如果 props 有 value 字段，则由父级接管控制 state
 
-export const ControllableComponent = (props) => {
+export const ControllableComponent = props => {
   const [state, setState] = useControllable(props)
-  return <input value={state} onChange={(e) => setState(e.target.value)} className="w-300px" />
+  return <input value={state} onChange={e => setState(e.target.value)} className="w-300px" />
 }
 
 export const Parent = () => {
@@ -81,9 +81,9 @@ import { useControllable } from '@youknown/react-hook'
 import { Button } from '@youknown/react-ui'
 import { useState } from 'react'
 
-export const ControllableComponent = (props: { value: string, onChange: (value: string) => void }) => {
+export const ControllableComponent = (props: { value: string; onChange: (value: string) => void }) => {
   const [state, setState] = useControllable<string>(props)
-  return <input value={state} onChange={(e) => setState(e.target.value)} className="w-300px" />
+  return <input value={state} onChange={e => setState(e.target.value)} className="w-300px" />
 }
 
 export const Parent = () => {
@@ -110,23 +110,23 @@ export const Parent = () => {
 
 ### Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| props    | 组件的 props           | `Record<string, any>`         | -  |
-| options    | 可选配置项           | `Options`         | -  |
+| 参数    | 说明         | 类型                  | 默认值 |
+| ------- | ------------ | --------------------- | ------ |
+| props   | 组件的 props | `Record<string, any>` | -      |
+| options | 可选配置项   | `Options`             | -      |
 
 ### Result
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| state    | 状态值           | `any`         |
-| setState    | 修改 state 的函数           | `React.Dispatch<React.SetStateAction<any>>`         |
+| 参数     | 说明              | 类型                                        |
+| -------- | ----------------- | ------------------------------------------- |
+| state    | 状态值            | `any`                                       |
+| setState | 修改 state 的函数 | `React.Dispatch<React.SetStateAction<any>>` |
 
 ### Options
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- |---------|
-| defaultValue    | 默认值，会被 props.defaultValue 和 props.value 覆盖           | `any`         | -         |
-| defaultValuePropName    | 默认值的属性名           | `string`         | `'defaultValue'`         |
-| valuePropName    | 值的属性名           | `string`         | `'value'`         |
-| trigger    | 	修改值时，触发的函数           | `string`         | `'onChange'`         |
+| 参数                 | 说明                                                | 类型     | 默认值           |
+| -------------------- | --------------------------------------------------- | -------- | ---------------- |
+| defaultValue         | 默认值，会被 props.defaultValue 和 props.value 覆盖 | `any`    | -                |
+| defaultValuePropName | 默认值的属性名                                      | `string` | `'defaultValue'` |
+| valuePropName        | 值的属性名                                          | `string` | `'value'`        |
+| trigger              | 修改值时，触发的函数                                | `string` | `'onChange'`     |

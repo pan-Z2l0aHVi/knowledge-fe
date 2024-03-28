@@ -6,12 +6,12 @@ import ErrorBoundary from '@/app/components/error-boundary'
 import { routes } from './routes'
 
 const router = createBrowserRouter([
-	{
-		path: '*',
-		element: <App />,
-		children: routes,
-		errorElement: <ErrorBoundary />
-	}
+  {
+    path: '*',
+    element: <App />,
+    children: routes,
+    errorElement: <ErrorBoundary />
+  }
 ])
 
 export default router

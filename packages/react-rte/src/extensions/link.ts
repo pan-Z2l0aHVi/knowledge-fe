@@ -5,20 +5,20 @@ import LinkPicker from '../components/link-picker'
 import { linkSelectionPlugin } from '../plugins/link-selection-plugin'
 
 export default TiptapLink.extend<
-	LinkOptions & {
-		menu: typeof LinkPicker
-		bubble: typeof LinkPicker
-	}
+  LinkOptions & {
+    menu: typeof LinkPicker
+    bubble: typeof LinkPicker
+  }
 >({
-	addOptions() {
-		return {
-			...this.parent?.(),
-			menu: LinkPicker,
-			bubble: LinkPicker
-		}
-	},
+  addOptions() {
+    return {
+      ...this.parent?.(),
+      menu: LinkPicker,
+      bubble: LinkPicker
+    }
+  },
 
-	addProseMirrorPlugins() {
-		return [linkSelectionPlugin()]
-	}
+  addProseMirrorPlugins() {
+    return [linkSelectionPlugin()]
+  }
 })

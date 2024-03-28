@@ -2,7 +2,7 @@
 
 ## 代码演示
 
-import { Image, Divider, Space, Button } from '@youknown/react-ui/src'
+import { Button, Divider, Image, Space } from '@youknown/react-ui/src'
 
 export const picSrc = 'https://iph.href.lu/879x400'
 
@@ -27,7 +27,7 @@ export function ImageCanPreview() {
 ---
 
 ```tsx
-import { Image, Divider } from '@youknown/react-ui'
+import { Divider, Image } from '@youknown/react-ui'
 
 export default () => {
   const picSrc = 'https://iph.href.lu/879x400'
@@ -46,9 +46,7 @@ export default () => {
 ### 禁止查看大图
 
 export function ImageCanNotPreview() {
-  return (
-    <Image src={picSrc} width="300px" />
-  )
+  return <Image src={picSrc} width="300px" />
 }
 
 <ImageCanNotPreview />
@@ -60,9 +58,7 @@ import { Image } from '@youknown/react-ui'
 
 export default () => {
   const picSrc = 'https://iph.href.lu/879x400'
-  return (
-    <Image src={picSrc} width="300px" />
-  )
+  return <Image src={picSrc} width="300px" />
 }
 ```
 
@@ -99,7 +95,7 @@ export function ImageCommand() {
 ---
 
 ```tsx
-import { Image, Space, Button } from '@youknown/react-ui'
+import { Button, Image, Space } from '@youknown/react-ui'
 
 export default () => {
   const picSrc = 'https://iph.href.lu/879x400'
@@ -179,10 +175,10 @@ export default () => {
 
 ### Image Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| bordered    | 有边框           | `boolean`         | `false`  |
-| shadow    | 有阴影           | `boolean`         | `false`  |
-| header    | 头部           | `React.ReactNode`         | -  |
-| footer    | 底部           | `React.ReactNode`         | -  |
-| cover    | 封面           | `React.ReactNode`         | -  |
+| 属性     | 说明   | 类型              | 默认值  |
+| -------- | ------ | ----------------- | ------- |
+| bordered | 有边框 | `boolean`         | `false` |
+| shadow   | 有阴影 | `boolean`         | `false` |
+| header   | 头部   | `React.ReactNode` | -       |
+| footer   | 底部   | `React.ReactNode` | -       |
+| cover    | 封面   | `React.ReactNode` | -       |

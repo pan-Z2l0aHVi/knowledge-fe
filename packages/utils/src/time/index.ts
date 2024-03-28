@@ -2,11 +2,11 @@
  * 延时
  */
 export function delay(duration = 0): Promise<number> {
-	return new Promise(resolve => {
-		const timer = window.setTimeout(() => {
-			resolve(timer)
-		}, duration)
-	})
+  return new Promise(resolve => {
+    const timer = window.setTimeout(() => {
+      resolve(timer)
+    }, duration)
+  })
 }
 
 export const macroDefer = setTimeout

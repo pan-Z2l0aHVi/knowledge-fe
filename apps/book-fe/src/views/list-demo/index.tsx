@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import ListMDX from './list.mdx'
 
 export default function ListDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.list')} component={ListMDX} />
+  return <Demo heading={t('page.title.list')} component={ListMDX} />
 }

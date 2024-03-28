@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import TriggerMDX from './trigger.mdx'
 
 export default function TriggerDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.trigger')} component={TriggerMDX} />
+  return <Demo heading={t('page.title.trigger')} component={TriggerMDX} />
 }

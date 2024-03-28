@@ -9,38 +9,38 @@ import { useModalStore } from '@/stores'
 import { report } from '@/utils/report'
 
 export function useInitApp() {
-	const { t } = useTranslation()
-	const close_preferences_modal = useModalStore(state => state.close_preferences_modal)
+  const { t } = useTranslation()
+  const close_preferences_modal = useModalStore(state => state.close_preferences_modal)
 
-	useMount(() => {
-		window.addEventListener('online', () => {
-			Toast.success(t('network.recovery'))
-		})
-		window.addEventListener('offline', () => {
-			Toast.error(t('network.abort'))
-		})
-	})
+  useMount(() => {
+    window.addEventListener('online', () => {
+      Toast.success(t('network.recovery'))
+    })
+    window.addEventListener('offline', () => {
+      Toast.error(t('network.abort'))
+    })
+  })
 
-	const route_meta = useRouteMeta()
-	const title = route_meta.title?.()
-	useEffect(() => {
-		if (title) {
-			document.title = title
-		}
-	}, [title])
+  const route_meta = useRouteMeta()
+  const title = route_meta.title?.()
+  useEffect(() => {
+    if (title) {
+      document.title = title
+    }
+  }, [title])
 
-	const location = useLocation()
-	useEffect(() => {
-		report({
-			event: 'page_view',
-			payload: location
-		})
-	}, [location])
+  const location = useLocation()
+  useEffect(() => {
+    report({
+      event: 'page_view',
+      payload: location
+    })
+  }, [location])
 
-	// 切页面时关闭全局弹窗
-	useEffect(() => {
-		if (location) {
-			close_preferences_modal()
-		}
-	}, [close_preferences_modal, location])
+  // 切页面时关闭全局弹窗
+  useEffect(() => {
+    if (location) {
+      close_preferences_modal()
+    }
+  }, [close_preferences_modal, location])
 }

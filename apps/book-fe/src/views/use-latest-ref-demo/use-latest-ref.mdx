@@ -19,7 +19,7 @@ export function BasicUsage() {
       setCount(latestCountRef.current + 1)
     }, 1000)
     return () => clearInterval(interval)
-  }, [])
+  }, [latestCountRef])
   return (
     <>
       <p>count: {count}</p>

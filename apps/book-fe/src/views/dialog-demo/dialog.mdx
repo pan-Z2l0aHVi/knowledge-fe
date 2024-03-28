@@ -2,7 +2,7 @@
 
 ## 代码演示
 
-import { Dialog, Divider, Button } from '@youknown/react-ui/src'
+import { Button, Dialog, Divider } from '@youknown/react-ui/src'
 import { useState } from 'react'
 
 ---
@@ -13,9 +13,7 @@ export function BasicUsage() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Button onClick={() => setOpen(true)}>
-        Show dialog
-      </Button>
+      <Button onClick={() => setOpen(true)}>Show dialog</Button>
       <Dialog
         open={open}
         title="Basic Dialog"
@@ -34,16 +32,14 @@ export function BasicUsage() {
 ---
 
 ```tsx
-import { Dialog, Divider, Button } from '@youknown/react-ui'
+import { Button, Dialog, Divider } from '@youknown/react-ui'
 import { useState } from 'react'
 
 export default () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Button onClick={() => setOpen(true)}>
-        Show dialog
-      </Button>
+      <Button onClick={() => setOpen(true)}>Show dialog</Button>
       <Dialog
         open={open}
         title="Basic Dialog"
@@ -89,7 +85,7 @@ export function DialogCommand() {
 ---
 
 ```tsx
-import { Dialog, Button } from '@youknown/react-ui'
+import { Button, Dialog } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -122,25 +118,25 @@ export default () => {
 
 继承 Overlay Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| hasCancel    | 是否展示取消按钮           | `boolean`         | `true`  |
-| closeIcon    | 关闭按钮           | `boolean`         | `<CloseIcon />`  |
-| overlayClassName    | 蒙层class           | `string`         | `''`  |
-| title    | 标题           | `string`         | -  |
-| header    | 头部           | `React.ReactNode`         | `React.ReactNode`  |
-| footer    | 底部           | `React.ReactNode`         | `React.ReactNode`  |
-| okText    | 确认按钮文本           | `string`         | `'OK'`  |
-| cancelText    | 取消按钮文本           | `string`         | `'Cancel'`  |
-| okLoading    | 确认按钮加载状态           | `boolean`         | `false`  |
-| okDanger    | 确认按钮是否为危险按钮           | `boolean`         | `false`  |
-| onOk    | 确认回调函数          | `() => void`         | -  |
-| onCancel    | 取消回调函数          | `() => void`         | -  |
+| 属性             | 说明                   | 类型              | 默认值            |
+| ---------------- | ---------------------- | ----------------- | ----------------- |
+| hasCancel        | 是否展示取消按钮       | `boolean`         | `true`            |
+| closeIcon        | 关闭按钮               | `boolean`         | `<CloseIcon />`   |
+| overlayClassName | 蒙层class              | `string`          | `''`              |
+| title            | 标题                   | `string`          | -                 |
+| header           | 头部                   | `React.ReactNode` | `React.ReactNode` |
+| footer           | 底部                   | `React.ReactNode` | `React.ReactNode` |
+| okText           | 确认按钮文本           | `string`          | `'OK'`            |
+| cancelText       | 取消按钮文本           | `string`          | `'Cancel'`        |
+| okLoading        | 确认按钮加载状态       | `boolean`         | `false`           |
+| okDanger         | 确认按钮是否为危险按钮 | `boolean`         | `false`           |
+| onOk             | 确认回调函数           | `() => void`      | -                 |
+| onCancel         | 取消回调函数           | `() => void`      | -                 |
 
 ### Dialog.confirm
 
 其余属性与 Dialog Props 一致
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| content    | 内容           | `React.ReactNode`         | -  |
+| 属性    | 说明 | 类型              | 默认值 |
+| ------- | ---- | ----------------- | ------ |
+| content | 内容 | `React.ReactNode` | -      |

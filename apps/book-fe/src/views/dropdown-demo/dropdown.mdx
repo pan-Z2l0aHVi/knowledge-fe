@@ -2,9 +2,9 @@
 
 ## 代码演示
 
+import { Button, Divider, Dropdown, Space } from '@youknown/react-ui/src'
 import { useState } from 'react'
 import { TbCheckbox, TbChevronRight } from 'react-icons/tb'
-import { Button, Divider, Dropdown, Space } from '@youknown/react-ui/src'
 
 ---
 
@@ -80,8 +80,8 @@ export function DropdownTrigger() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Button, Dropdown, Space } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [open, setOpen] = useState(false)
@@ -173,7 +173,7 @@ export function DropdownItemDisabled() {
 ---
 
 ```tsx
-import { Dropdown, Button } from '@youknown/react-ui'
+import { Button, Dropdown } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -246,7 +246,7 @@ export function DropdownClose() {
 ---
 
 ```tsx
-import { Dropdown, Button, Space } from '@youknown/react-ui'
+import { Button, Dropdown, Space } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -323,7 +323,7 @@ export function DropdownGroup() {
 ---
 
 ```tsx
-import { Dropdown, Button, Divider } from '@youknown/react-ui'
+import { Button, Divider, Dropdown } from '@youknown/react-ui'
 
 export default () => {
   return (
@@ -383,7 +383,7 @@ export function DropdownItemIcon() {
 ---
 
 ```tsx
-import { Dropdown, Button, Space } from '@youknown/react-ui'
+import { Button, Dropdown, Space } from '@youknown/react-ui'
 import { TbCheckbox, TbChevronRight } from 'react-icons/tb'
 
 export default () => {
@@ -531,27 +531,27 @@ export default () => {
 
 继承自 Trigger Props，去除了`'popup' \| 'growTransformOrigin' \| 'motion'`
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| content    | 弹出内容           | `React.ReactNode`         | -  |
+| 属性    | 说明     | 类型              | 默认值 |
+| ------- | -------- | ----------------- | ------ |
+| content | 弹出内容 | `React.ReactNode` | -      |
 
 ### Dropdown.Menu Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| closeAfterItemClick    | 选中后关闭           | `boolean`         | `false`  |
+| 属性                | 说明       | 类型      | 默认值  |
+| ------------------- | ---------- | --------- | ------- |
+| closeAfterItemClick | 选中后关闭 | `boolean` | `false` |
 
 ### Dropdown.Item Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| closeAfterItemClick    | 选中后关闭           | `boolean`         | `false`  |
-| disabled    | 禁用状态           | `boolean`         | `false`  |
-| prefix    | 前缀图标           | `React.ReactNode`         | -  |
-| suffix    | 后缀图标           | `React.ReactNode`         | -  |
+| 属性                | 说明       | 类型              | 默认值  |
+| ------------------- | ---------- | ----------------- | ------- |
+| closeAfterItemClick | 选中后关闭 | `boolean`         | `false` |
+| disabled            | 禁用状态   | `boolean`         | `false` |
+| prefix              | 前缀图标   | `React.ReactNode` | -       |
+| suffix              | 后缀图标   | `React.ReactNode` | -       |
 
 ### Dropdown.Close
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| Close    | 关闭全部下拉菜单           | `() => void`         | -  |
+| 参数  | 说明             | 类型         | 默认值 |
+| ----- | ---------------- | ------------ | ------ |
+| Close | 关闭全部下拉菜单 | `() => void` | -      |

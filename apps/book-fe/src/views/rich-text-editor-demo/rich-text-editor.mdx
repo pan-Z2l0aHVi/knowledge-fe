@@ -2,7 +2,6 @@
 
 ## 代码演示
 
-import { useEffect } from 'react'
 import {
   Blockquote,
   Bold,
@@ -28,6 +27,7 @@ import {
 } from '@youknown/react-rte/src'
 import { Divider } from '@youknown/react-ui/src'
 import { delay } from '@youknown/utils/src'
+import { useEffect } from 'react'
 
 ---
 
@@ -60,38 +60,24 @@ export default () => {
 ### 菜单栏
 
 如何配置菜单？
+
 1. 传入`extensions`配置插件
 2. 传入`list`配置模块是否展示以及展示顺序
+
 - 对于`MenuBar list`、`bubbleList`，`'|'` 为分割线
 - 对于`floatingList`、`insertList`，`'-'` 为分割线
 
 export function WithMenu() {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Heading,
-      Bold,
-      Strike,
-      Italic,
-      Underline,
-      Code
-    ]
+    extensions: [Heading, Bold, Strike, Italic, Underline, Code]
   })
   return (
     <>
       <RTEMenuBar
         editor={editor}
         insertList={[]}
-        list={[
-          '|',
-          'heading',
-          '|',
-          'bold',
-          'strike',
-          'italic',
-          'underline',
-          'code'
-        ]}  
+        list={['|', 'heading', '|', 'bold', 'strike', 'italic', 'underline', 'code']}
       />
       <Divider size="small" />
       <RTEContent editor={editor} floating={false} bubble={false} />
@@ -104,46 +90,20 @@ export function WithMenu() {
 ---
 
 ```tsx
+import { Bold, Code, Heading, Italic, RTEContent, RTEMenuBar, Strike, Underline, useRTE } from '@youknown/react-rte'
 import { Divider } from '@youknown/react-ui'
-import {
-  RTEContent,
-  RTEMenuBar,
-  useRTE,
-  Heading,
-  Bold,
-  Strike,
-  Italic,
-  Underline,
-  Code
-} from '@youknown/react-rte'
 
 export default () => {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Heading,
-      Bold,
-      Strike,
-      Italic,
-      Underline,
-      Code
-    ]
+    extensions: [Heading, Bold, Strike, Italic, Underline, Code]
   })
   return (
     <>
       <RTEMenuBar
         editor={editor}
         insertList={[]}
-        list={[
-          '|',
-          'heading',
-          '|',
-          'bold',
-          'strike',
-          'italic',
-          'underline',
-          'code'
-        ]}  
+        list={['|', 'heading', '|', 'bold', 'strike', 'italic', 'underline', 'code']}
       />
       <Divider size="small" />
       <RTEContent editor={editor} floating={false} bubble={false} />
@@ -157,55 +117,22 @@ export default () => {
 export function WithBubble() {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Bold,
-      Strike,
-      Italic,
-      Underline,
-      Code
-    ]
+    extensions: [Bold, Strike, Italic, Underline, Code]
   })
-  return (
-    <RTEContent
-      editor={editor}
-      floating={false}
-      bubbleList={['bold', 'strike', 'italic', 'underline', 'code']}
-    />
-  )
+  return <RTEContent editor={editor} floating={false} bubbleList={['bold', 'strike', 'italic', 'underline', 'code']} />
 }
 
 <WithBubble />
 
 ```tsx
-import {
-  RTEContent,
-  useRTE,
-  Heading,
-  Bold,
-  Strike,
-  Italic,
-  Underline,
-  Code
-} from '@youknown/react-rte'
+import { Bold, Code, Heading, Italic, RTEContent, Strike, Underline, useRTE } from '@youknown/react-rte'
 
 export default () => {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Bold,
-      Strike,
-      Italic,
-      Underline,
-      Code
-    ]
+    extensions: [Bold, Strike, Italic, Underline, Code]
   })
-  return (
-    <RTEContent
-      editor={editor}
-      floating={false}
-      bubbleList={['bold', 'strike', 'italic', 'underline', 'code']}
-    />
-  )
+  return <RTEContent editor={editor} floating={false} bubbleList={['bold', 'strike', 'italic', 'underline', 'code']} />
 }
 ```
 
@@ -214,14 +141,7 @@ export default () => {
 export function WithFloating() {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Heading,
-      Blockquote,
-      BulletList,
-      OrderedList,
-      CodeBlock,
-      HorizontalRule
-    ]
+    extensions: [Heading, Blockquote, BulletList, OrderedList, CodeBlock, HorizontalRule]
   })
   return (
     <RTEContent
@@ -236,27 +156,20 @@ export function WithFloating() {
 
 ```tsx
 import {
-  RTEContent,
-  useRTE,
-  Heading,
   Blockquote,
   BulletList,
-  OrderedList,
   CodeBlock,
-  HorizontalRule
+  Heading,
+  HorizontalRule,
+  OrderedList,
+  RTEContent,
+  useRTE
 } from '@youknown/react-rte'
 
 export default () => {
   const editor = useRTE({
     placeholder: '请输入',
-    extensions: [
-      Heading,
-      Blockquote,
-      BulletList,
-      OrderedList,
-      CodeBlock,
-      HorizontalRule
-    ]
+    extensions: [Heading, Blockquote, BulletList, OrderedList, CodeBlock, HorizontalRule]
   })
   return (
     <RTEContent
@@ -312,27 +225,26 @@ export function FullFeature() {
     content: ''
   })
 
-  useEffect(() => {
-    ;(async () => {
-      loadLanguages()
-    })()
-  }, [])
+useEffect(() => {
+;(async () => {
+loadLanguages()
+})()
+}, [])
 
-  return (
-    <>
-      <RTEMenuBar editor={editor} />
-      <Divider size="small" />
-      <RTEContent editor={editor} />
-    </>
-  )
-}
+return (
+
+<>
+  <RTEMenuBar editor={editor} />
+  <Divider size="small" />
+  <RTEContent editor={editor} />
+</>
+) }
 
 <FullFeature />
 
 ---
 
 ```tsx
-import { useEffect } from 'react'
 import {
   Blockquote,
   Bold,
@@ -358,6 +270,7 @@ import {
 } from '@youknown/react-rte'
 import { Divider } from '@youknown/react-ui'
 import { delay } from '@youknown/utils'
+import { useEffect } from 'react'
 
 let index = -1
 export default () => {
@@ -421,7 +334,7 @@ export default () => {
 例如：
 
 ```tsx
-import { Bold, Table, Image } from '@youknown/react-rte'
+import { Bold, Image, Table } from '@youknown/react-rte'
 // 替换为
 import Bold from '@youknown/react-rte/extensions/bold'
 import Image from '@youknown/react-rte/extensions/image'
@@ -432,37 +345,36 @@ import Table from '@youknown/react-rte/extensions/table'
 
 ### RTEContent Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| editor    | 编辑器实例           | `Editor`         | `false`  |
-| bubble    | 是否展示气泡菜单           | `boolean`         | `false`  |
-| floating    | 是否展示浮动菜单           | `boolean`         | `false`  |
-| bubbleList    | 气泡菜单列表           | `string[]`         | -  |
-| floatingList    | 浮动菜单列表           | `string[]`         | -  |
+| 属性         | 说明             | 类型       | 默认值  |
+| ------------ | ---------------- | ---------- | ------- |
+| editor       | 编辑器实例       | `Editor`   | `false` |
+| bubble       | 是否展示气泡菜单 | `boolean`  | `false` |
+| floating     | 是否展示浮动菜单 | `boolean`  | `false` |
+| bubbleList   | 气泡菜单列表     | `string[]` | -       |
+| floatingList | 浮动菜单列表     | `string[]` | -       |
 
 ### RTEMenuBar Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| editor    | 编辑器实例           | `Editor`         | `false`  |
-| list    | 菜单列表           | `string[]`         | -  |
-| insertList    | 插入下拉菜单列表           | `string[]`         | -  |
+| 属性       | 说明             | 类型       | 默认值  |
+| ---------- | ---------------- | ---------- | ------- |
+| editor     | 编辑器实例       | `Editor`   | `false` |
+| list       | 菜单列表         | `string[]` | -       |
+| insertList | 插入下拉菜单列表 | `string[]` | -       |
 
 ### useRTE Options
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| content    | 编辑器默认内容           | `string`         | -  |
-| placeholder    | 占位符           | `string \| (props: PlaceholderProps) => string`         | -  |
-| autofocus    | 自动聚焦           | `'start' \| 'end' \| 'all' \| number \| boolean \| null`         | -  |
-| extensions    | 插件列表           | `Extension[]`         | `[]`  |
-| editable    | 是否可编辑           | `boolean`         | `true`  |
-| onBeforeCreate    | 创建之前回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onCreate    | 已创建回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onUpdate    | 内容更新回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onSelectionUpdate    | 选取更新回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onTransaction    | 触发事务回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onFocus    | 聚焦回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onBlur    | 失焦回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-| onDestroy    | 销毁回调函数           | `(props: EditorEvents['beforeCreate']) => void`         | -  |
-
+| 参数              | 说明             | 类型                                                     | 默认值 |
+| ----------------- | ---------------- | -------------------------------------------------------- | ------ |
+| content           | 编辑器默认内容   | `string`                                                 | -      |
+| placeholder       | 占位符           | `string \| (props: PlaceholderProps) => string`          | -      |
+| autofocus         | 自动聚焦         | `'start' \| 'end' \| 'all' \| number \| boolean \| null` | -      |
+| extensions        | 插件列表         | `Extension[]`                                            | `[]`   |
+| editable          | 是否可编辑       | `boolean`                                                | `true` |
+| onBeforeCreate    | 创建之前回调函数 | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onCreate          | 已创建回调函数   | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onUpdate          | 内容更新回调函数 | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onSelectionUpdate | 选取更新回调函数 | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onTransaction     | 触发事务回调函数 | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onFocus           | 聚焦回调函数     | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onBlur            | 失焦回调函数     | `(props: EditorEvents['beforeCreate']) => void`          | -      |
+| onDestroy         | 销毁回调函数     | `(props: EditorEvents['beforeCreate']) => void`          | -      |

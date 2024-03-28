@@ -78,33 +78,33 @@ export default () => {
 
 ### Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| fetcher    | 请求函数           | `(...args: any) => Promise<any>`         | -  |
-| options    | 可选配置           | `Options`         | `false`  |
+| 参数    | 说明     | 类型                             | 默认值  |
+| ------- | -------- | -------------------------------- | ------- |
+| fetcher | 请求函数 | `(...args: any) => Promise<any>` | -       |
+| options | 可选配置 | `Options`                        | `false` |
 
 ### Result
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| data    | 数据           | `any`         |
-| error    | 错误           | `any`         |
-| loading    | 是否加载中           | `boolean`         |
-| run    | 请求执行函数           | `() => void`         |
-| cancel    | 请求取消函数           | `() => void`         |
-| mutate    | 手动修改数据           | `React.Dispatch<React.SetStateAction>`         |
+| 参数    | 说明         | 类型                                   |
+| ------- | ------------ | -------------------------------------- |
+| data    | 数据         | `any`                                  |
+| error   | 错误         | `any`                                  |
+| loading | 是否加载中   | `boolean`                              |
+| run     | 请求执行函数 | `() => void`                           |
+| cancel  | 请求取消函数 | `() => void`                           |
+| mutate  | 手动修改数据 | `React.Dispatch<React.SetStateAction>` |
 
 ### Options
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| initialData    | 初始数据           | `any`         | -  |
-| manual    | 是否为手动触发           | `boolean`         | `false`  |
-| ready    | 是否可以发起请求           | `boolean`         | `true`  |
-| loadingDelay    | 加载中延时触发时长           | `number`         | `0`  |
-| refreshDeps    | 自动刷新的依赖列表           | `React.DependencyList`         | `[]`  |
-| params    | 请求参数           | `any[]`         | `[]`  |
-| onBefore    | 请求发起前回调函数，返回值为`true`时终止请求          | `(params: any[]) => Promise<void \| boolean>`         | -  |
-| onSuccess    | 请求成功回调函数           | `(data: any, params: any[]) => void`         | -  |
-| onError    | 请求失败回调函数           | `(error: any, params: any[]) => void`         | -  |
-| onFinally    | 请求结束回调函数           | `(params: any[]) => void`         | -  |
+| 参数         | 说明                                         | 类型                                          | 默认值  |
+| ------------ | -------------------------------------------- | --------------------------------------------- | ------- |
+| initialData  | 初始数据                                     | `any`                                         | -       |
+| manual       | 是否为手动触发                               | `boolean`                                     | `false` |
+| ready        | 是否可以发起请求                             | `boolean`                                     | `true`  |
+| loadingDelay | 加载中延时触发时长                           | `number`                                      | `0`     |
+| refreshDeps  | 自动刷新的依赖列表                           | `React.DependencyList`                        | `[]`    |
+| params       | 请求参数                                     | `any[]`                                       | `[]`    |
+| onBefore     | 请求发起前回调函数，返回值为`true`时终止请求 | `(params: any[]) => Promise<void \| boolean>` | -       |
+| onSuccess    | 请求成功回调函数                             | `(data: any, params: any[]) => void`          | -       |
+| onError      | 请求失败回调函数                             | `(error: any, params: any[]) => void`         | -       |
+| onFinally    | 请求结束回调函数                             | `(params: any[]) => void`                     | -       |

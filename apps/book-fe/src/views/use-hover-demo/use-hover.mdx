@@ -13,10 +13,7 @@ import { useEffect } from 'react'
 ### 基本用法
 
 export function BasicUsage() {
-  const [ele, isHover] = useHover(isHovering => isHovering
-    ? <Button>hovering</Button>
-    : <Button>text</Button>
-  )
+  const [ele, isHover] = useHover(isHovering => (isHovering ? <Button>hovering</Button> : <Button>text</Button>))
   useEffect(() => {
     console.log('isHover', isHover)
   }, [isHover])
@@ -33,10 +30,7 @@ import { Button } from '@youknown/react-ui'
 import { useEffect } from 'react'
 
 export default () => {
-  const [ele, isHover] = useHover(isHovering => isHovering
-    ? <Button>hovering</Button>
-    : <Button>text</Button>
-  )
+  const [ele, isHover] = useHover(isHovering => (isHovering ? <Button>hovering</Button> : <Button>text</Button>))
   useEffect(() => {
     console.log('isHover', isHover)
   }, [isHover])
@@ -52,13 +46,13 @@ export default () => {
 
 ### Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| render    | 渲染函数           | `boolean => React.ReactNode`         | -  |
+| 参数   | 说明     | 类型                         | 默认值 |
+| ------ | -------- | ---------------------------- | ------ |
+| render | 渲染函数 | `boolean => React.ReactNode` | -      |
 
 ### Result
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| ele    | 渲染后的元素           | `React.ReactNode`         | -  |
-| isHover    | 是否悬停           | `boolean`         | `false`  |
+| 参数    | 说明         | 类型              | 默认值  |
+| ------- | ------------ | ----------------- | ------- |
+| ele     | 渲染后的元素 | `React.ReactNode` | -       |
+| isHover | 是否悬停     | `boolean`         | `false` |

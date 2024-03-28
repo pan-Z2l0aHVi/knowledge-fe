@@ -2,8 +2,8 @@
 
 ## 代码演示
 
-import { useState } from 'react'
 import { Button, Collapse, Divider } from '@youknown/react-ui/src'
+import { useState } from 'react'
 
 ---
 
@@ -149,8 +149,8 @@ export function Controlled() {
 ---
 
 ```tsx
-import { useState } from 'react'
 import { Button, Collapse, Divider } from '@youknown/react-ui'
+import { useState } from 'react'
 
 export default () => {
   const [actives, setActives] = useState<(string | number)[]>([1])
@@ -200,14 +200,13 @@ export function CollapseCustom() {
     >
       <div className="p-8px color-#999">
         <p>
-          min-height: 0px !important; max-height: none !important; height: 0px !important; visibility:
-          hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000
-          !important; top: 0px !important; right: 0px !important; border-width: 0px; box-sizing:
-          border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-          Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 14px; font-style:
-          normal; font-weight: 400; letter-spacing: normal; line-height: 23.1px; padding: 0px 4px;
-          tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width: 240px;
-          word-break: normal;
+          min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden
+          !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px
+          !important; right: 0px !important; border-width: 0px; box-sizing: border-box; font-family: -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica
+          Neue", sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; line-height:
+          23.1px; padding: 0px 4px; tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width:
+          240px; word-break: normal;
         </p>
       </div>
     </Collapse.Panel>
@@ -240,14 +239,13 @@ export default () => {
     >
       <div className="p-8px color-#999">
         <p>
-          min-height: 0px !important; max-height: none !important; height: 0px !important; visibility:
-          hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000
-          !important; top: 0px !important; right: 0px !important; border-width: 0px; box-sizing:
-          border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-          Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 14px; font-style:
-          normal; font-weight: 400; letter-spacing: normal; line-height: 23.1px; padding: 0px 4px;
-          tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width: 240px;
-          word-break: normal;
+          min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden
+          !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px
+          !important; right: 0px !important; border-width: 0px; box-sizing: border-box; font-family: -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica
+          Neue", sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; line-height:
+          23.1px; padding: 0px 4px; tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width:
+          240px; word-break: normal;
         </p>
       </div>
     </Collapse.Panel>
@@ -259,22 +257,22 @@ export default () => {
 
 ### Collapse Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| accordion    | 手风琴模式           | `boolean`         | `false`  |
-| defaultActives    | 默认值           | `(string \| number)[]`         | `[]`  |
-| actives    | 激活列表           | `(string \| number)[]`         | -  |
-| onChange    | 值变化事件回调           | `(actives: (string \| number)[]) => void`         | -  |
+| 属性           | 说明           | 类型                                      | 默认值  |
+| -------------- | -------------- | ----------------------------------------- | ------- |
+| accordion      | 手风琴模式     | `boolean`                                 | `false` |
+| defaultActives | 默认值         | `(string \| number)[]`                    | `[]`    |
+| actives        | 激活列表       | `(string \| number)[]`                    | -       |
+| onChange       | 值变化事件回调 | `(actives: (string \| number)[]) => void` | -       |
 
 ### Collapse Panel Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| itemKey    | key           | `string | number`         | -  |
-| custom    | 自定义元素           | `React.ReactNode`         | -  |
-| title    | 标题           | `React.ReactNode`         | -  |
-| bordered    | 是否带边框           | `boolean`         | `false`  |
-| mountOnEnter    | 是否展开时挂载           | `boolean`         | `true`  |
-| unmountOnExit    | 是否折叠时销毁           | `boolean`         | `false`  |
-| expand    | 是否展开           | `boolean`         | `false`  |
-| onChange    | 值变化事件回调           | `(expand: boolean) => void`         | -  |
+| 属性          | 说明           | 类型                        | 默认值  |
+| ------------- | -------------- | --------------------------- | ------- | --- |
+| itemKey       | key            | `string                     | number` | -   |
+| custom        | 自定义元素     | `React.ReactNode`           | -       |
+| title         | 标题           | `React.ReactNode`           | -       |
+| bordered      | 是否带边框     | `boolean`                   | `false` |
+| mountOnEnter  | 是否展开时挂载 | `boolean`                   | `true`  |
+| unmountOnExit | 是否折叠时销毁 | `boolean`                   | `false` |
+| expand        | 是否展开       | `boolean`                   | `false` |
+| onChange      | 值变化事件回调 | `(expand: boolean) => void` | -       |

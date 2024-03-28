@@ -2,7 +2,7 @@
 
 ## 代码演示
 
-import { Select, Switch, Space } from '@youknown/react-ui/src'
+import { Select, Space, Switch } from '@youknown/react-ui/src'
 import { useState } from 'react'
 
 ---
@@ -136,11 +136,7 @@ export function Controllable() {
     <Space>
       <Select
         value={selection}
-        onChange={val => {
-          if (!Array.isArray(val)) {
-            setSelection(val)
-          }
-        }}
+        onChange={setSelection}
         menuList={[
           {
             value: 0,
@@ -159,11 +155,7 @@ export function Controllable() {
       <Select
         multiple
         value={multipleSelection}
-        onChange={val => {
-          if (Array.isArray(val)) {
-            setMultipleSelection(val)
-          }
-        }}
+        onChange={setMultipleSelection}
         menuList={[
           {
             value: 0,
@@ -198,11 +190,7 @@ export default () => {
     <Space>
       <Select
         value={selection}
-        onChange={val => {
-          if (!Array.isArray(val)) {
-            setSelection(val)
-          }
-        }}
+        onChange={setSelection}
         menuList={[
           {
             value: 0,
@@ -221,11 +209,7 @@ export default () => {
       <Select
         multiple
         value={multipleSelection}
-        onChange={val => {
-          if (Array.isArray(val)) {
-            setMultipleSelection(val)
-          }
-        }}
+        onChange={setMultipleSelection}
         menuList={[
           {
             value: 0,
@@ -418,28 +402,25 @@ export default () => {
 
 ### Select Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| multiple    | 是否多选           | `boolean`         | `false`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| placement    | 排布           | `Placement`         | `'bottom-start'`  |
-| filter    | 可筛选           | `boolean`         | `false`  |
-| placeholder    | 占位符           | `string`         | `t('react_ui.placeholder.select')`  |
-| allowClear    | 展示清空按钮           | `boolean`         | `false`  |
-| noMore    | 没有更多数据           | `boolean`         | `true`  |
-| menuList    | 可选列表           | `Option[]`         | `[]`  |
-| value    | 值           | `string \| number`         | -  |
-| defaultValue    | 默认值           | `string \| number`         | -  |
-| onChange    | 值改变事件回调函数           | `(value: string \| number) => void`         | -  |
-| onLoad    | 加载更多回调函数           | `() => void`         | -  |
+| 属性         | 说明               | 类型                                | 默认值                             |
+| ------------ | ------------------ | ----------------------------------- | ---------------------------------- |
+| multiple     | 是否多选           | `boolean`                           | `false`                            |
+| disabled     | 是否禁用           | `boolean`                           | `false`                            |
+| placement    | 排布               | `Placement`                         | `'bottom-start'`                   |
+| filter       | 可筛选             | `boolean`                           | `false`                            |
+| placeholder  | 占位符             | `string`                            | `t('react_ui.placeholder.select')` |
+| allowClear   | 展示清空按钮       | `boolean`                           | `false`                            |
+| noMore       | 没有更多数据       | `boolean`                           | `true`                             |
+| menuList     | 可选列表           | `Option[]`                          | `[]`                               |
+| value        | 值                 | `string \| number`                  | -                                  |
+| defaultValue | 默认值             | `string \| number`                  | -                                  |
+| onChange     | 值改变事件回调函数 | `(value: string \| number) => void` | -                                  |
+| onLoad       | 加载更多回调函数   | `() => void`                        | -                                  |
 
 ### Option
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| label    | 选项 key           | `React.ReactNode`         | -  |
-| value    | 选项值           | `(string \| number) \| (string \| number)[]`         | -  |
-| disabled    | 是否禁用           | `boolean`         | -  |
-
-
-
+| 参数     | 说明     | 类型                                         | 默认值 |
+| -------- | -------- | -------------------------------------------- | ------ |
+| label    | 选项 key | `React.ReactNode`                            | -      |
+| value    | 选项值   | `(string \| number) \| (string \| number)[]` | -      |
+| disabled | 是否禁用 | `boolean`                                    | -      |

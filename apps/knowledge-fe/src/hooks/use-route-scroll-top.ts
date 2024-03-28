@@ -6,19 +6,19 @@ import { useRouteKeepAlive } from './use-route-keep-alive'
 const BLOCK_LIST = ['/wallpapers']
 
 export function useRouteScrollTop() {
-	const is_keep_alive = useRouteKeepAlive()
-	const location = useLocation()
-	useLayoutEffect(() => {
-		if (is_keep_alive) {
-			return
-		}
-		if (BLOCK_LIST.includes(location.pathname)) {
-			return
-		}
-		window.scrollTo({
-			top: 0,
-			left: 0,
-			behavior: 'instant'
-		})
-	}, [is_keep_alive, location])
+  const is_keep_alive = useRouteKeepAlive()
+  const location = useLocation()
+  useLayoutEffect(() => {
+    if (is_keep_alive) {
+      return
+    }
+    if (BLOCK_LIST.includes(location.pathname)) {
+      return
+    }
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    })
+  }, [is_keep_alive, location])
 }

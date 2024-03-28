@@ -5,17 +5,17 @@ import BlockquoteBtn from '../components/blockquote-btn'
 import BlockquoteItem from '../components/blockquote-item'
 
 export default TiptapBlockquote.extend<
-	BlockquoteOptions & {
-		insert: typeof BlockquoteItem
-		floating: typeof BlockquoteItem
-	}
+  BlockquoteOptions & {
+    insert: typeof BlockquoteItem
+    floating: typeof BlockquoteItem
+  }
 >({
-	addOptions() {
-		return {
-			...this.parent?.(),
-			menu: BlockquoteBtn,
-			insert: BlockquoteItem,
-			floating: BlockquoteItem
-		}
-	}
+  addOptions() {
+    return {
+      ...this.parent?.(),
+      menu: BlockquoteBtn,
+      insert: BlockquoteItem,
+      floating: BlockquoteItem
+    }
+  }
 })

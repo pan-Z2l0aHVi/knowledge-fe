@@ -14,18 +14,13 @@ import { useState } from 'react'
 
 export function BasicUsage() {
   const [value, setValue] = useState(0)
-  const run = useDebounce(
-    () => {
-      setValue(value + 1)
-    },
-    500
-  )
+  const run = useDebounce(() => {
+    setValue(value + 1)
+  }, 500)
   return (
     <div>
-      <p className='mt-16px'> Clicked count: {value} </p>
-      <Button onClick={run}>
-        Click fast!
-      </Button>
+      <p className="mt-16px"> Clicked count: {value} </p>
+      <Button onClick={run}>Click fast!</Button>
     </div>
   )
 }
@@ -41,18 +36,13 @@ import { useState } from 'react'
 
 export default () => {
   const [value, setValue] = useState(0)
-  const run = useDebounce(
-    () => {
-      setValue(value + 1)
-    },
-    500
-  )
+  const run = useDebounce(() => {
+    setValue(value + 1)
+  }, 500)
   return (
     <div>
-      <p className='mt-16px'> Clicked count: {value} </p>
-      <Button onClick={run}>
-        Click fast!
-      </Button>
+      <p className="mt-16px"> Clicked count: {value} </p>
+      <Button onClick={run}>Click fast!</Button>
     </div>
   )
 }
@@ -66,15 +56,15 @@ export default () => {
 
 ### Params
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| fn    | 需要防抖执行的函数           | `() => void`         | -  |
-| duration    | 防抖时间           | `number`         | `1000`  |
+| 参数     | 说明               | 类型         | 默认值 |
+| -------- | ------------------ | ------------ | ------ |
+| fn       | 需要防抖执行的函数 | `() => void` | -      |
+| duration | 防抖时间           | `number`     | `1000` |
 
 ### Result
 
-| 参数       | 说明               | 类型              |
-| ---------- | ------------------ | ----------------- |
-| run    | 触发执行 fn，函数参数将会传递给 fn           | `() => void`         |
-| cancel    | 取消当前防抖             | `() => void`         |
-| flush    | 立即调用当前防抖函数             | `() => void`         |
+| 参数   | 说明                               | 类型         |
+| ------ | ---------------------------------- | ------------ |
+| run    | 触发执行 fn，函数参数将会传递给 fn | `() => void` |
+| cancel | 取消当前防抖                       | `() => void` |
+| flush  | 立即调用当前防抖函数               | `() => void` |

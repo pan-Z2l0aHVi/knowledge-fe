@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import SwitchMDX from './switch.mdx'
 
 export default function SwitchDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.switch')} component={SwitchMDX} />
+  return <Demo heading={t('page.title.switch')} component={SwitchMDX} />
 }

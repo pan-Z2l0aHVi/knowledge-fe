@@ -2,9 +2,9 @@
 
 ## 代码演示
 
-import { TbUser } from 'react-icons/tb'
-import { useState } from 'react'
 import { Avatar, Divider, Space, Tabs } from '@youknown/react-ui/src'
+import { useState } from 'react'
+import { TbUser } from 'react-icons/tb'
 
 export const picSrc = 'https://iph.href.lu/200x200'
 
@@ -16,13 +16,11 @@ export function AvatarType() {
   return (
     <Space>
       <Avatar src={picSrc} />
-      <Avatar src='this is a error url' />
+      <Avatar src="this is a error url" />
       <Avatar>
         <TbUser size={20} />
       </Avatar>
-      <Avatar>
-        Text
-      </Avatar>
+      <Avatar>Text</Avatar>
     </Space>
   )
 }
@@ -39,13 +37,11 @@ export default () => {
   return (
     <Space>
       <Avatar src={picSrc} />
-      <Avatar src='this_is_a_error_url' />
+      <Avatar src="this_is_a_error_url" />
       <Avatar>
         <TbUser size={20} />
       </Avatar>
-      <Avatar>
-        Text
-      </Avatar>
+      <Avatar>Text</Avatar>
     </Space>
   )
 }
@@ -104,7 +100,7 @@ export function AvatarSize() {
           <TbUser size={20} />
         </Avatar>
         <Avatar size={size}>
-          <span className='text-12px'>Text</span>
+          <span className="text-12px">Text</span>
         </Avatar>
       </Space>
       <Divider />
@@ -136,9 +132,7 @@ export default () => {
       <Avatar size={size}>
         <TbUser size={20} />
       </Avatar>
-      <Avatar size={size}>
-        Text
-      </Avatar>
+      <Avatar size={size}>Text</Avatar>
     </Space>
   )
 }
@@ -147,9 +141,7 @@ export default () => {
 ### 头像徽章
 
 export function AvatarBadge() {
-  return (
-    <Avatar badge="99+" src={picSrc} />
-  )
+  return <Avatar badge="99+" src={picSrc} />
 }
 
 <AvatarBadge />
@@ -208,12 +200,12 @@ export default () => {
 
 ## API
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| bordered    | 有边框           | `boolean`         | `false`  |
-| canPreview   | 开启图片查看器           | `boolean`         | `false`  |
-| size       | 大小               | `number \| 'small' \| 'medium' \| 'large'` | `'medium'` |
-| round      | 大圆角形状         | `boolean`         | `false`  |
-| src    | 图像地址         | `string`         | `''`  |
-| color    | 背景色         | `string`         | `'var(--ui-bg-3)'`  |
-| badge    | 角标         | `React.ReactNode`         | -  |
+| 属性       | 说明           | 类型                                       | 默认值             |
+| ---------- | -------------- | ------------------------------------------ | ------------------ |
+| bordered   | 有边框         | `boolean`                                  | `false`            |
+| canPreview | 开启图片查看器 | `boolean`                                  | `false`            |
+| size       | 大小           | `number \| 'small' \| 'medium' \| 'large'` | `'medium'`         |
+| round      | 大圆角形状     | `boolean`                                  | `false`            |
+| src        | 图像地址       | `string`                                   | `''`               |
+| color      | 背景色         | `string`                                   | `'var(--ui-bg-3)'` |
+| badge      | 角标           | `React.ReactNode`                          | -                  |

@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import TagMDX from './tag.mdx'
 
 export default function TagDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.tag')} component={TagMDX} />
+  return <Demo heading={t('page.title.tag')} component={TagMDX} />
 }

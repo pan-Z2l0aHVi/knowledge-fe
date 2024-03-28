@@ -5,7 +5,7 @@ import Demo from '@/app/components/demo'
 import PopoverMDX from './popover.mdx'
 
 export default function PopoverDemo() {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
 
-	return <Demo heading={t('page.title.popover')} component={PopoverMDX} />
+  return <Demo heading={t('page.title.popover')} component={PopoverMDX} />
 }

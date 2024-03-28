@@ -26,7 +26,7 @@
     "react-window": "^1.8.10"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
+    "**/*.{js,ts,jsx,tsx}": "eslint --cache --fix",
     "**/*.{css,scss,less}": "stylelint --fix"
   },
   "browserslist": [

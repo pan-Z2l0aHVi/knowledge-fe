@@ -2,9 +2,9 @@
 
 ## 代码演示
 
-import { useState } from 'react'
 import { Divider, Space, Upload } from '@youknown/react-ui/src'
 import { delay } from '@youknown/utils/src'
+import { useState } from 'react'
 
 ---
 
@@ -155,17 +155,17 @@ export default () => {
 
 ### Upload Props
 
-| 属性       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| circle    | 是否圆形           | `boolean`         | `false`  |
-| headless    | 是否无样式           | `boolean`         | `false`  |
-| multiple    | 是否可多选           | `boolean`         | `false`  |
-| disabled    | 是否禁用           | `boolean`         | `false`  |
-| accept    | 可选择的类型           | `string`         | -  |
-| defaultValue    | 默认选中的文件列表           | `UploadFile[]`         | `[]`  |
-| value    | 选中的文件列表           | `UploadFile[]`         | -  |
-| action    | 文件传输函数           | `(file: File) => Promise<string>`         | -  |
-| onChange    | 文件列表变化回调函数           | `(value: UploadFile[]) => void`         | -  |
+| 属性         | 说明                 | 类型                              | 默认值  |
+| ------------ | -------------------- | --------------------------------- | ------- |
+| circle       | 是否圆形             | `boolean`                         | `false` |
+| headless     | 是否无样式           | `boolean`                         | `false` |
+| multiple     | 是否可多选           | `boolean`                         | `false` |
+| disabled     | 是否禁用             | `boolean`                         | `false` |
+| accept       | 可选择的类型         | `string`                          | -       |
+| defaultValue | 默认选中的文件列表   | `UploadFile[]`                    | `[]`    |
+| value        | 选中的文件列表       | `UploadFile[]`                    | -       |
+| action       | 文件传输函数         | `(file: File) => Promise<string>` | -       |
+| onChange     | 文件列表变化回调函数 | `(value: UploadFile[]) => void`   | -       |
 
 ### UploadFile
 
@@ -173,9 +173,9 @@ export default () => {
 
 ### UploadAttr
 
-| 参数       | 说明               | 类型              | 默认值   |
-| ---------- | ------------------ | ----------------- | -------- |
-| uid    | 唯一ID           | `string \| number`         | -  |
-| url    | 图片链接           | `string`         | -  |
-| previewURL    | 预览图像链接           | `string`         | -  |
-| status    | 状态           | `'success' \| 'error' \| 'uploading'`         | -  |
+| 参数       | 说明         | 类型                                  | 默认值 |
+| ---------- | ------------ | ------------------------------------- | ------ |
+| uid        | 唯一ID       | `string \| number`                    | -      |
+| url        | 图片链接     | `string`                              | -      |
+| previewURL | 预览图像链接 | `string`                              | -      |
+| status     | 状态         | `'success' \| 'error' \| 'uploading'` | -      |

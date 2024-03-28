@@ -32,7 +32,7 @@
     },
     "dependencies": {},
     "lint-staged": {
-        "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
+        "**/*.{js,ts,jsx,tsx}": "eslint --cache --fix",
         "**/*.{css,scss,less}": "stylelint --fix"
     },
     "browserslist": [
